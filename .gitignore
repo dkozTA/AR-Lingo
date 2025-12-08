@@ -1,0 +1,58 @@
+# --- Unity Core (QUAN TRỌNG: Không xóa phần này) ---
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/Packages/*
+
+# --- MemoryCaptures & Crash Reports ---
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# --- Visual Studio / IDE (File tự sinh, không cần upload) ---
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# --- Visual Studio Code Specific ---
+.vscode/
+
+# --- Visual Studio Specific ---
+.vs/
+
+# --- OS Generated (File rác của hệ điều hành) ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# --- Unity Version Control (Plastic SCM) ---
+# Vì bạn dùng UVC để phát triển nhưng nộp bằng Git,
+# cần loại bỏ folder metadata của Plastic để tránh upload nhầm lên GitHub.
+/.plastic/
+/ignore.conf
+*.private
+*.private.meta
+^*.private.[0-9]+
+^*.private.[0-9]+.meta
+
+# --- Asset specific overrides (Giữ lại meta file) ---
+# Bắt buộc phải giữ file .meta vì Unity dùng nó để quản lý link giữa các object
+!*.meta
