@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="img_alpaca" size="0.100000 0.100000" />
+    <ImageTarget name="img_wolf" size="0.100000 0.100000" />
+    <ImageTarget name="img_shibainu" size="0.100000 0.100000" />
+    <ImageTarget name="img_husky" size="0.100000 0.100000" />
+    <ImageTarget name="img_horse_white" size="0.100000 0.100000" />
+    <ImageTarget name="img_fox" size="0.100000 0.100000" />
+    <ImageTarget name="img_donkey" size="0.100000 0.100000" />
+    <ImageTarget name="img_deer" size="0.100000 0.100000" />
+    <ImageTarget name="img_cow" size="0.100000 0.100000" />
+    <ImageTarget name="img_bull" size="0.100000 0.100000" />
+  </Tracking>
+</QCARConfig>
