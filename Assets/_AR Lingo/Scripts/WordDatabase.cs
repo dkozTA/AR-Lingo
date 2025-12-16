@@ -20,4 +20,23 @@ public class WordDatabase : ScriptableObject
         // Shuffle và lấy count phần tử (Logic giả định, cần viết kỹ hơn sau này)
         return allWords.OrderBy(x => Random.value).Take(count).ToList();
     }
+
+    // Hàm lấy tất cả các từ (Dùng cho Dictionary List View)
+    public List<WordData> GetAllWords()
+    {
+        return allWords != null ? new List<WordData>(allWords) : new List<WordData>();
+    }
+
+    // Hàm tìm kiếm từ theo tên (English hoặc Vietnamese)
+    public List<WordData> SearchWords(string searchText)
+    {
+        if (string.IsNullOrEmpty(searchText) || allWords == null)
+            return GetAllWords();
+
+        searchText = searchText.ToLower();
+        return allWords.Where(w => 
+            w.englishName.ToLower().Contains(searchText) ||
+            w.vietnameseName.ToLower().Contains(searchText)
+        ).ToList();
+    }
 }

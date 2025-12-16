@@ -44,7 +44,7 @@ public class SimpleMenuController : MonoBehaviour
         Application.Quit(); 
     }
 
-    // --- HÀM CHO NÚT BACK (Dùng chung cho tất cả) ---
+    // --- HÀM CHO NÚT BACK ---
 
     public void BackToHome()
     {
