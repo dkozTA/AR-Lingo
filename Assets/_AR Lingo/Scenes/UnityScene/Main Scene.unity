@@ -393,6 +393,11 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetBehaviour
+--- !u!4 &89337908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5841488042926519489, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
+  m_PrefabInstance: {fileID: 146860580}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &89337909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,7 +668,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 295610138}
     m_Modifications:
     - target: {fileID: 882408015008078244, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
       propertyPath: mPreview
@@ -683,7 +688,7 @@ PrefabInstance:
       objectReference: {fileID: 4706989081468748772, guid: ec2326ae8fb9e884db8a8ef473e578b9, type: 3}
     - target: {fileID: 5841488042926519489, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 621.5171
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5841488042926519489, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
       propertyPath: m_LocalPosition.y
@@ -691,7 +696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5841488042926519489, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6844.792
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5841488042926519489, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1053,6 +1058,40 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &295610137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 295610138}
+  m_Layer: 0
+  m_Name: ImageTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &295610138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295610137}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 621.5171, y: 0, z: 6844.792}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 89337908}
+  - {fileID: 2093917603}
+  - {fileID: 1796520239}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &316712288
 GameObject:
   m_ObjectHideFlags: 0
@@ -4592,7 +4631,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 295610138}
     m_Modifications:
     - target: {fileID: 79854855119142767, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
       propertyPath: m_Name
@@ -4608,7 +4647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2646130612834873638, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 621.5171
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2646130612834873638, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4616,7 +4655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2646130612834873638, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6844.792
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2646130612834873638, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4871,11 +4910,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 295610138}
     m_Modifications:
     - target: {fileID: 4055210947261273926, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 621.5171
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4055210947261273926, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4883,7 +4922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4055210947261273926, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6844.792
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4055210947261273926, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5733,6 +5772,11 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetBehaviour
+--- !u!4 &1796520239 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4055210947261273926, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
+  m_PrefabInstance: {fileID: 1393803096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1796520240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6464,6 +6508,11 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetBehaviour
+--- !u!4 &2093917603 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2646130612834873638, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
+  m_PrefabInstance: {fileID: 1280200321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2093917604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7012,6 +7061,4 @@ SceneRoots:
   - {fileID: 1430969269}
   - {fileID: 1218519773}
   - {fileID: 357212375}
-  - {fileID: 146860580}
-  - {fileID: 1280200321}
-  - {fileID: 1393803096}
+  - {fileID: 295610138}
