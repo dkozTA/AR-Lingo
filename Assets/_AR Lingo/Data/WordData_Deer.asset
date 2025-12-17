@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7bebb417f87f1b4f96e4db0d435d7f4, type: 3}
+  m_Name: WordData_Deer
+  m_EditorClassIdentifier: Assembly-CSharp::WordData
+  id: Deer
+  englishName: Deer
+  vietnameseName: "Con h\u01B0\u01A1u"
+  description: Hoofed ruminant mammals forming the family Cervidae.
+  modelPrefab: {fileID: 8604027563084526486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
+  icon2D: {fileID: 21300000, guid: c383ea5f6230edc41a5f983157c2a9e3, type: 3}
+  audioPronounce: {fileID: 8300000, guid: f3082e5788770b34ebf44ec53dae2944, type: 3}
+  audioSFX: {fileID: 8300000, guid: b18a16ef6f39f5a4299d4baaacabb5a9, type: 3}

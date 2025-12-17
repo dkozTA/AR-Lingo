@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7bebb417f87f1b4f96e4db0d435d7f4, type: 3}
-  m_Name: WordData_Alpaca
+  m_Name: WordData_HorseWhite
   m_EditorClassIdentifier: Assembly-CSharp::WordData
-  id: Alpaca
-  englishName: 'Alpaca '
-  vietnameseName: "L\u1EA1c \u0111\xE0 Alpaca "
-  description: A domesticated species of South American camelid.
+  id: Horse_White
+  englishName: White Horse
+  vietnameseName: "Ng\u1EF1a tr\u1EAFng"
+  description: A horse with a coat consisting of white hairs.
   modelPrefab: {fileID: 0}
-  icon2D: {fileID: 21300000, guid: e4f5db6e15a05b94b9ea0ab1d31c6bd6, type: 3}
-  audioPronounce: {fileID: 8300000, guid: bac5acd47b7c8ff42a45e953ae4d05aa, type: 3}
-  audioSFX: {fileID: 0}
+  icon2D: {fileID: 21300000, guid: 35910fbe4278d7a44ab2bb3604b45df9, type: 3}
+  audioPronounce: {fileID: 8300000, guid: 799262db48ee5914ebf8fa8c5b4eee0f, type: 3}
+  audioSFX: {fileID: 8300000, guid: b729ab94c132f904591ca85bb14c1df4, type: 3}

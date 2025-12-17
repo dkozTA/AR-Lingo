@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7bebb417f87f1b4f96e4db0d435d7f4, type: 3}
-  m_Name: WordData_Alpaca
+  m_Name: WordData_ShibaInu
   m_EditorClassIdentifier: Assembly-CSharp::WordData
-  id: Alpaca
-  englishName: 'Alpaca '
-  vietnameseName: "L\u1EA1c \u0111\xE0 Alpaca "
-  description: A domesticated species of South American camelid.
+  id: ShibaInu
+  englishName: Shiba Inu
+  vietnameseName: "Ch\xF3 Shiba"
+  description: A Japanese breed of hunting dog.
   modelPrefab: {fileID: 0}
-  icon2D: {fileID: 21300000, guid: e4f5db6e15a05b94b9ea0ab1d31c6bd6, type: 3}
-  audioPronounce: {fileID: 8300000, guid: bac5acd47b7c8ff42a45e953ae4d05aa, type: 3}
-  audioSFX: {fileID: 0}
+  icon2D: {fileID: 21300000, guid: f9ace54c5c6bba8489d7fdef5789d4f3, type: 3}
+  audioPronounce: {fileID: 8300000, guid: 1e105ebf1e2966240a0e26cd9e52d79c, type: 3}
+  audioSFX: {fileID: 8300000, guid: 48232001620ce0d4f94199c2e7a7870e, type: 3}

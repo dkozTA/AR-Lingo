@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7bebb417f87f1b4f96e4db0d435d7f4, type: 3}
-  m_Name: WordData_Alpaca
+  m_Name: WordData_Donkey
   m_EditorClassIdentifier: Assembly-CSharp::WordData
-  id: Alpaca
-  englishName: 'Alpaca '
-  vietnameseName: "L\u1EA1c \u0111\xE0 Alpaca "
-  description: A domesticated species of South American camelid.
+  id: Donkey
+  englishName: Donkey
+  vietnameseName: "Con l\u1EEBa"
+  description: A domesticated member of the horse family.
   modelPrefab: {fileID: 0}
-  icon2D: {fileID: 21300000, guid: e4f5db6e15a05b94b9ea0ab1d31c6bd6, type: 3}
-  audioPronounce: {fileID: 8300000, guid: bac5acd47b7c8ff42a45e953ae4d05aa, type: 3}
-  audioSFX: {fileID: 0}
+  icon2D: {fileID: 21300000, guid: 31616a4b226859043828da4acd93336b, type: 3}
+  audioPronounce: {fileID: 8300000, guid: 9cefd322bb8903a4fa6f7cbffb1126c0, type: 3}
+  audioSFX: {fileID: 8300000, guid: 9d92c305131a369499883ae62fb3f730, type: 3}
