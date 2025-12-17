@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Resources/Sirenix.meta
 guid: ec05c0dca90b0c146adc8ffabfd7e4aa
-========
-guid: 72ecbb38408dd4a359615d7c990a628a
->>>>>>>> 150d3a03bc1bbcf83fe5cccf5711ebe570c55868:Assets/StreamingAssets.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

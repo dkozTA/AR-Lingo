@@ -1,28 +1,44 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))] // Tự động thêm AudioSource nếu quên
+[RequireComponent(typeof(Collider))]    // Bắt buộc có Collider
 public class AnimalInteraction : MonoBehaviour
 {
-    public AudioClip animalSound; // Kéo file mp3 vào đây
-    public AudioClip nameSound;   // Kéo file đọc tên vào đây (nếu muốn)
-    private AudioSource audioSource;
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip sfxAnimal; // Đổi tên cho rõ nghĩa
+    [SerializeField] private AudioClip sfxName;   // Voice đọc tên
 
-    void Start()
+    private AudioSource _audioSource;
+
+    void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
-        // Đảm bảo có Collider để nhận tương tác
-        if (GetComponent<Collider>() == null)
-        {
-             Debug.LogError("Thiếu Collider trên con vật: " + gameObject.name);
-        }
+        _audioSource = GetComponent<AudioSource>();
     }
 
-    void OnMouseDown()
+    private void OnEnable()
     {
-        // Hàm này tự động chạy khi click chuột hoặc chạm ngón tay vào vật thể có Collider
-        if (animalSound != null)
+        PlayInteraction(); // Gọi hàm phát tiếng ngay lập tức
+    }
+
+    private void OnMouseDown()
+    {
+        // TODO: Sau này sẽ thay bằng AR Raycast system
+        PlayInteraction();
+    }
+
+    public void PlayInteraction()
+    {
+        if (sfxAnimal != null)
         {
-            audioSource.PlayOneShot(animalSound);
-            Debug.Log("Đã chạm vào: " + gameObject.name);
+            // Stop âm thanh cũ nếu đang chạy để tránh ồn
+            if (_audioSource.isPlaying) _audioSource.Stop();
+
+            _audioSource.PlayOneShot(sfxAnimal);
+            Debug.Log($"[AnimalInteraction] Playing SFX for: {gameObject.name}");
+        }
+        else
+        {
+            Debug.LogWarning($"[AnimalInteraction] Missing SFX for: {gameObject.name}");
         }
     }
 }

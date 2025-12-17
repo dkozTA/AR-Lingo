@@ -5,8 +5,10 @@ E:.
 |   folder_structure.txt
 |   folder_structure.txt.meta
 |   Plugins.meta
+|   Resources.meta
 |   Settings.meta
 |   StreamingAssets.meta
+|   TextMesh Pro.meta
 |   ThirdParty.meta
 |   _AR Lingo.meta
 |   
@@ -53,12 +55,35 @@ E:.
 |       |           
 |       \---ImageTargetTextures
 |           |   AnimalFlashcards.meta
+|           |   NewAnimalDatabase.meta
 |           |   VuforiaEmulator.meta
 |           |   VuforiaMars_Images.meta
 |           |   
 |           +---AnimalFlashcards
 |           |       img_cow_scaled.jpg
 |           |       img_cow_scaled.jpg.meta
+|           |       
+|           +---NewAnimalDatabase
+|           |       img_alpaca_scaled.jpg
+|           |       img_alpaca_scaled.jpg.meta
+|           |       img_bull_scaled.jpg
+|           |       img_bull_scaled.jpg.meta
+|           |       img_cow_scaled.jpg
+|           |       img_cow_scaled.jpg.meta
+|           |       img_deer_scaled.jpg
+|           |       img_deer_scaled.jpg.meta
+|           |       img_donkey_scaled.jpg
+|           |       img_donkey_scaled.jpg.meta
+|           |       img_fox_scaled.jpg
+|           |       img_fox_scaled.jpg.meta
+|           |       img_horse_white_scaled.jpg
+|           |       img_horse_white_scaled.jpg.meta
+|           |       img_husky_scaled.jpg
+|           |       img_husky_scaled.jpg.meta
+|           |       img_shibainu_scaled.jpg
+|           |       img_shibainu_scaled.jpg.meta
+|           |       img_wolf_scaled.jpg
+|           |       img_wolf_scaled.jpg.meta
 |           |       
 |           +---VuforiaEmulator
 |           |       emulator_ground_plane_scaled.jpg
@@ -87,6 +112,27 @@ E:.
 |                   Oxygen_scaled.jpg.meta
 |                   
 +---Plugins
+|   |   Sirenix.meta
+|   |   
+|   \---Sirenix
+|       |   Odin Inspector.meta
+|       |   Odin Validator.meta
+|       |   
+|       +---Odin Inspector
+|       |   |   Config.meta
+|       |   |   
+|       |   \---Config
+|       \---Odin Validator
+|           |   Editor.meta
+|           |   
+|           \---Editor
+|               |   Config.meta
+|               |   
+|               \---Config
++---Resources
+|       VuforiaConfiguration.asset
+|       VuforiaConfiguration.asset.meta
+|       
 +---Settings
 |   |   Build Profiles.meta
 |   |   Input.meta
@@ -104,10 +150,111 @@ E:.
 |           AnimalFlashcards.dat.meta
 |           AnimalFlashcards.xml
 |           AnimalFlashcards.xml.meta
+|           NewAnimalDatabase.dat
+|           NewAnimalDatabase.dat.meta
+|           NewAnimalDatabase.xml
+|           NewAnimalDatabase.xml.meta
 |           VuforiaMars_Images.dat
 |           VuforiaMars_Images.dat.meta
 |           VuforiaMars_Images.xml
 |           VuforiaMars_Images.xml.meta
+|           
++---TextMesh Pro
+|   |   Fonts.meta
+|   |   Resources.meta
+|   |   Shaders.meta
+|   |   Sprites.meta
+|   |   
+|   +---Fonts
+|   |       LiberationSans - OFL.txt
+|   |       LiberationSans - OFL.txt.meta
+|   |       LiberationSans.ttf
+|   |       LiberationSans.ttf.meta
+|   |       
+|   +---Resources
+|   |   |   Fonts & Materials.meta
+|   |   |   LineBreaking Following Characters.txt
+|   |   |   LineBreaking Following Characters.txt.meta
+|   |   |   LineBreaking Leading Characters.txt
+|   |   |   LineBreaking Leading Characters.txt.meta
+|   |   |   Sprite Assets.meta
+|   |   |   Style Sheets.meta
+|   |   |   TMP Settings.asset
+|   |   |   TMP Settings.asset.meta
+|   |   |   
+|   |   +---Fonts & Materials
+|   |   |       LiberationSans SDF - Drop Shadow.mat
+|   |   |       LiberationSans SDF - Drop Shadow.mat.meta
+|   |   |       LiberationSans SDF - Fallback.asset
+|   |   |       LiberationSans SDF - Fallback.asset.meta
+|   |   |       LiberationSans SDF - Outline.mat
+|   |   |       LiberationSans SDF - Outline.mat.meta
+|   |   |       LiberationSans SDF.asset
+|   |   |       LiberationSans SDF.asset.meta
+|   |   |       
+|   |   +---Sprite Assets
+|   |   |       EmojiOne.asset
+|   |   |       EmojiOne.asset.meta
+|   |   |       
+|   |   \---Style Sheets
+|   |           Default Style Sheet.asset
+|   |           Default Style Sheet.asset.meta
+|   |           
+|   +---Shaders
+|   |       SDFFunctions.hlsl
+|   |       SDFFunctions.hlsl.meta
+|   |       TMPro.cginc
+|   |       TMPro.cginc.meta
+|   |       TMPro_Mobile.cginc
+|   |       TMPro_Mobile.cginc.meta
+|   |       TMPro_Properties.cginc
+|   |       TMPro_Properties.cginc.meta
+|   |       TMPro_Surface.cginc
+|   |       TMPro_Surface.cginc.meta
+|   |       TMP_Bitmap-Custom-Atlas.shader
+|   |       TMP_Bitmap-Custom-Atlas.shader.meta
+|   |       TMP_Bitmap-Mobile.shader
+|   |       TMP_Bitmap-Mobile.shader.meta
+|   |       TMP_Bitmap.shader
+|   |       TMP_Bitmap.shader.meta
+|   |       TMP_SDF Overlay.shader
+|   |       TMP_SDF Overlay.shader.meta
+|   |       TMP_SDF SSD.shader
+|   |       TMP_SDF SSD.shader.meta
+|   |       TMP_SDF-HDRP LIT.shadergraph
+|   |       TMP_SDF-HDRP LIT.shadergraph.meta
+|   |       TMP_SDF-HDRP UNLIT.shadergraph
+|   |       TMP_SDF-HDRP UNLIT.shadergraph.meta
+|   |       TMP_SDF-Mobile Masking.shader
+|   |       TMP_SDF-Mobile Masking.shader.meta
+|   |       TMP_SDF-Mobile Overlay.shader
+|   |       TMP_SDF-Mobile Overlay.shader.meta
+|   |       TMP_SDF-Mobile SSD.shader
+|   |       TMP_SDF-Mobile SSD.shader.meta
+|   |       TMP_SDF-Mobile-2-Pass.shader
+|   |       TMP_SDF-Mobile-2-Pass.shader.meta
+|   |       TMP_SDF-Mobile.shader
+|   |       TMP_SDF-Mobile.shader.meta
+|   |       TMP_SDF-Surface-Mobile.shader
+|   |       TMP_SDF-Surface-Mobile.shader.meta
+|   |       TMP_SDF-Surface.shader
+|   |       TMP_SDF-Surface.shader.meta
+|   |       TMP_SDF-URP Lit.shadergraph
+|   |       TMP_SDF-URP Lit.shadergraph.meta
+|   |       TMP_SDF-URP Unlit.shadergraph
+|   |       TMP_SDF-URP Unlit.shadergraph.meta
+|   |       TMP_SDF.shader
+|   |       TMP_SDF.shader.meta
+|   |       TMP_Sprite.shader
+|   |       TMP_Sprite.shader.meta
+|   |       
+|   \---Sprites
+|           EmojiOne Attribution.txt
+|           EmojiOne Attribution.txt.meta
+|           EmojiOne.json
+|           EmojiOne.json.meta
+|           EmojiOne.png
+|           EmojiOne.png.meta
 |           
 +---ThirdParty
 |   |   SimpleNaturePack.meta
@@ -247,6 +394,7 @@ E:.
     |   Animations.meta
     |   Audio.meta
     |   Data.meta
+    |   Images.meta
     |   Materials.meta
     |   Models.meta
     |   Prefabs.meta
@@ -319,13 +467,139 @@ E:.
     |           Snd_Name_Wolf.mp3.meta
     |           
     +---Data
+    +---Images
     +---Materials
+    |       Black 1.mat
+    |       Black 1.mat.meta
+    |       Black.mat
+    |       Black.mat.meta
+    |       Eyes.mat
+    |       Eyes.mat.meta
+    |       Eyes_Black 1.mat
+    |       Eyes_Black 1.mat.meta
+    |       Eyes_Black 2.mat
+    |       Eyes_Black 2.mat.meta
+    |       Eyes_Black.mat
+    |       Eyes_Black.mat.meta
+    |       Eyes_Pupil.mat
+    |       Eyes_Pupil.mat.meta
+    |       Eyes_White 1.mat
+    |       Eyes_White 1.mat.meta
+    |       Eyes_White.mat
+    |       Eyes_White.mat.meta
+    |       Eye_Black 1.mat
+    |       Eye_Black 1.mat.meta
+    |       Eye_Black 2.mat
+    |       Eye_Black 2.mat.meta
+    |       Eye_Black 3.mat
+    |       Eye_Black 3.mat.meta
+    |       Eye_Black.mat
+    |       Eye_Black.mat.meta
+    |       Eye_Dark.mat
+    |       Eye_Dark.mat.meta
+    |       Eye_Lighter.mat
+    |       Eye_Lighter.mat.meta
+    |       Eye_White 1.mat
+    |       Eye_White 1.mat.meta
+    |       Eye_White 2.mat
+    |       Eye_White 2.mat.meta
+    |       Eye_White 3.mat
+    |       Eye_White 3.mat.meta
+    |       Eye_White 4.mat
+    |       Eye_White 4.mat.meta
+    |       Eye_White.mat
+    |       Eye_White.mat.meta
+    |       Grey.mat
+    |       Grey.mat.meta
+    |       Hair 1.mat
+    |       Hair 1.mat.meta
+    |       Hair.mat
+    |       Hair.mat.meta
+    |       Hooves 1.mat
+    |       Hooves 1.mat.meta
+    |       Hooves 2.mat
+    |       Hooves 2.mat.meta
+    |       Hooves 3.mat
+    |       Hooves 3.mat.meta
+    |       Hooves 4.mat
+    |       Hooves 4.mat.meta
+    |       Hooves 5.mat
+    |       Hooves 5.mat.meta
+    |       Hooves.mat
+    |       Hooves.mat.meta
+    |       Horns 1.mat
+    |       Horns 1.mat.meta
+    |       Horns.mat
+    |       Horns.mat.meta
+    |       Main 1.mat
+    |       Main 1.mat.meta
+    |       Main 2.mat
+    |       Main 2.mat.meta
+    |       Main 3.mat
+    |       Main 3.mat.meta
+    |       Main 4.mat
+    |       Main 4.mat.meta
+    |       Main 5.mat
+    |       Main 5.mat.meta
+    |       Main 6.mat
+    |       Main 6.mat.meta
+    |       Main 7.mat
+    |       Main 7.mat.meta
+    |       Main 8.mat
+    |       Main 8.mat.meta
+    |       Main.mat
+    |       Main.mat.meta
+    |       Main_Dark 1.mat
+    |       Main_Dark 1.mat.meta
+    |       Main_Dark 2.mat
+    |       Main_Dark 2.mat.meta
+    |       Main_Dark.mat
+    |       Main_Dark.mat.meta
+    |       Main_Light 1.mat
+    |       Main_Light 1.mat.meta
+    |       Main_Light 2.mat
+    |       Main_Light 2.mat.meta
+    |       Main_Light 3.mat
+    |       Main_Light 3.mat.meta
+    |       Main_Light 4.mat
+    |       Main_Light 4.mat.meta
+    |       Main_Light 5.mat
+    |       Main_Light 5.mat.meta
+    |       Main_Light 6.mat
+    |       Main_Light 6.mat.meta
+    |       Main_Light 7.mat
+    |       Main_Light 7.mat.meta
+    |       Main_Light 8.mat
+    |       Main_Light 8.mat.meta
+    |       Main_Light.mat
+    |       Main_Light.mat.meta
+    |       Material.001.mat
+    |       Material.001.mat.meta
+    |       Material.002.mat
+    |       Material.002.mat.meta
+    |       Material.003.mat
+    |       Material.003.mat.meta
+    |       Material.006.mat
+    |       Material.006.mat.meta
+    |       Material.mat
+    |       Material.mat.meta
+    |       Muzzle 1.mat
+    |       Muzzle 1.mat.meta
+    |       Muzzle 2.mat
+    |       Muzzle 2.mat.meta
+    |       Muzzle 3.mat
+    |       Muzzle 3.mat.meta
+    |       Muzzle 4.mat
+    |       Muzzle 4.mat.meta
+    |       Muzzle.mat
+    |       Muzzle.mat.meta
+    |       Nose.mat
+    |       Nose.mat.meta
+    |       
     +---Models
     |   |   Animals.meta
     |   |   
     |   \---Animals
-    |           Model_Alpaca.fbx
-    |           Model_Alpaca.fbx.meta
     |           Model_Bull.fbx
     |           Model_Bull.fbx.meta
     |           Model_Cow.fbx
@@ -347,51 +621,63 @@ E:.
     |           
     +---Prefabs
     |   |   Animals.meta
-    |   |   UI.meta
     |   |   
-    |   +---Animals
-    |   |       Pf_Alpaca.prefab
-    |   |       Pf_Alpaca.prefab.meta
-    |   |       Pf_Bull.prefab
-    |   |       Pf_Bull.prefab.meta
-    |   |       Pf_Cow.prefab
-    |   |       Pf_Cow.prefab.meta
-    |   |       Pf_Deer.prefab
-    |   |       Pf_Deer.prefab.meta
-    |   |       Pf_Donkey.prefab
-    |   |       Pf_Donkey.prefab.meta
-    |   |       Pf_Fox.prefab
-    |   |       Pf_Fox.prefab.meta
-    |   |       Pf_Horse_White.prefab
-    |   |       Pf_Horse_White.prefab.meta
-    |   |       Pf_Husky.prefab
-    |   |       Pf_Husky.prefab.meta
-    |   |       Pf_ShibaInu.prefab
-    |   |       Pf_ShibaInu.prefab.meta
-    |   |       Pf_Wolf.prefab
-    |   |       Pf_Wolf.prefab.meta
-    |   |       
-    |   \---UI
+    |   \---Animals
+    |           PF_Bull.prefab
+    |           PF_Bull.prefab.meta
+    |           PF_Cow.prefab
+    |           PF_Cow.prefab.meta
+    |           PF_Deer.prefab
+    |           PF_Deer.prefab.meta
+    |           
     +---Resources
     |       VuforiaConfiguration.asset
     |       VuforiaConfiguration.asset.meta
     |       
     +---Scenes
-    |       MainScene.unity
-    |       MainScene.unity.meta
-    |       
+    |   |   MainScene.unity
+    |   |   MainScene.unity.meta
+    |   |   UnityScene.meta
+    |   |   
+    |   \---UnityScene
+    |           menu.unity
+    |           menu.unity.meta
+    |           
     +---Scripts
-    |       AnimalInteraction.cs
-    |       AnimalInteraction.cs.meta
-    |       GameManager.cs
-    |       GameManager.cs.meta
-    |       MainUIController.cs
-    |       MainUIController.cs.meta
-    |       WordData.cs
-    |       WordData.cs.meta
-    |       WordDatabase.cs
-    |       WordDatabase.cs.meta
-    |       
+    |   |   AnimalInteraction.cs
+    |   |   AnimalInteraction.cs.meta
+    |   |   Controllers.meta
+    |   |   GameManager.cs
+    |   |   GameManager.cs.meta
+    |   |   MainUIController.cs
+    |   |   MainUIController.cs.meta
+    |   |   Managers.meta
+    |   |   UI.meta
+    |   |   WordData.cs
+    |   |   WordData.cs.meta
+    |   |   WordDatabase.cs
+    |   |   WordDatabase.cs.meta
+    |   |   
+    |   +---Controllers
+    |   |       SimpleMenuController.cs
+    |   |       SimpleMenuController.cs.meta
+    |   |       
+    |   +---Managers
+    |   |       SceneLoader.cs
+    |   |       SceneLoader.cs.meta
+    |   |       
+    |   \---UI
+    |           ARViewController.cs
+    |           ARViewController.cs.meta
+    |           DictionaryUI.cs
+    |           DictionaryUI.cs.meta
+    |           HomeUI.cs
+    |           HomeUI.cs.meta
+    |           QuizUI.cs
+    |           QuizUI.cs.meta
+    |           ScanUI.cs
+    |           ScanUI.cs.meta
+    |           
     \---Sprites
         |   Flashcards.meta
         |   Thumbnails.meta
