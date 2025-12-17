@@ -30,6 +30,10 @@ public class ARScanFeature : MonoBehaviour
     [Header("4. AR Detection Settings")]
     public LayerMask arModelLayer; // Layer for AR models to detect clicks
     public Camera arCamera; // Reference to AR Camera
+    [SerializeField] private bool autoShowButtonsOnDetection = false; // Auto show buttons without tap
+
+    [Header("5. Debug")]
+    [SerializeField] private bool enableDebugLogs = true;
 
     private WordData currentDetectedWord;
     private bool hasDetectedObject = false;
@@ -40,6 +44,8 @@ public class ARScanFeature : MonoBehaviour
         if (arCamera == null)
         {
             arCamera = Camera.main;
+            if (arCamera != null && enableDebugLogs)
+                Debug.Log($"[ARScanFeature] Auto-found camera: {arCamera.name}");
         }
     }
 
@@ -56,6 +62,9 @@ public class ARScanFeature : MonoBehaviour
         {
             gameManager.OnAnimalDetected += HandleAnimalDetected;
             gameManager.OnARObjectLost += HandleARObjectLost;
+            
+            if (enableDebugLogs)
+                Debug.Log("[ARScanFeature] Subscribed to GameManager events");
         }
         else
         {
@@ -82,7 +91,8 @@ public class ARScanFeature : MonoBehaviour
     /// </summary>
     private void HandleAnimalDetected(string wordID)
     {
-        Debug.Log($"[ARScanFeature] AR Target detected: {wordID}");
+        if (enableDebugLogs)
+            Debug.Log($"[ARScanFeature] AR Target detected: {wordID}");
 
         // Get word data from database
         if (wordDatabase != null)
@@ -91,7 +101,9 @@ public class ARScanFeature : MonoBehaviour
             
             if (currentDetectedWord != null)
             {
-                Debug.Log($"[ARScanFeature] Word found: {currentDetectedWord.englishName} ({currentDetectedWord.vietnameseName})");
+                if (enableDebugLogs)
+                    Debug.Log($"[ARScanFeature] Word found: {currentDetectedWord.englishName} ({currentDetectedWord.vietnameseName})");
+                
                 ShowDetectedObject();
             }
             else
@@ -111,7 +123,8 @@ public class ARScanFeature : MonoBehaviour
     /// </summary>
     private void HandleARObjectLost()
     {
-        Debug.Log("[ARScanFeature] AR Target lost");
+        if (enableDebugLogs)
+            Debug.Log("[ARScanFeature] AR Target lost");
         
         // Keep UI visible even when target is lost for better UX
         // User can still interact with buttons until they manually reset
@@ -131,9 +144,20 @@ public class ARScanFeature : MonoBehaviour
         // Show reset button
         if (resetButton != null) resetButton.SetActive(true);
 
-        // Buttons will appear after user taps on the 3D model (handled in Update)
-        if (viewInfoButton != null) viewInfoButton.SetActive(false);
-        if (quizButton != null) quizButton.SetActive(false);
+        // Auto-show buttons or wait for tap
+        if (autoShowButtonsOnDetection)
+        {
+            ShowActionButtons();
+        }
+        else
+        {
+            // Buttons will appear after user taps on the 3D model
+            if (viewInfoButton != null) viewInfoButton.SetActive(false);
+            if (quizButton != null) quizButton.SetActive(false);
+            
+            if (enableDebugLogs)
+                Debug.Log("[ARScanFeature] Waiting for tap on model to show buttons...");
+        }
     }
 
     /// <summary>
@@ -145,33 +169,78 @@ public class ARScanFeature : MonoBehaviour
         if (!hasDetectedObject) return;
 
         // Detect touch or mouse click
-        if (Input.GetMouseButtonDown(0))
+        bool inputDetected = false;
+        Vector3 inputPosition = Vector3.zero;
+
+        // Check for touch input (mobile)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            Ray ray;
+            inputDetected = true;
+            inputPosition = Input.GetTouch(0).position;
             
-            // Use AR Camera for raycasting
+            if (enableDebugLogs)
+                Debug.Log($"[ARScanFeature] Touch detected at: {inputPosition}");
+        }
+        // Check for mouse click (editor/PC)
+        else if (Input.GetMouseButtonDown(0))
+        {
+            inputDetected = true;
+            inputPosition = Input.mousePosition;
+            
+            if (enableDebugLogs)
+                Debug.Log($"[ARScanFeature] Mouse click detected at: {inputPosition}");
+        }
+
+        if (inputDetected)
+        {
+            // Try raycast with AR Camera
             if (arCamera != null)
             {
-                ray = arCamera.ScreenPointToRay(Input.mousePosition);
+                Ray ray = arCamera.ScreenPointToRay(inputPosition);
+                RaycastHit hit;
+                
+                if (enableDebugLogs)
+                    Debug.Log($"[ARScanFeature] Raycasting from {ray.origin} in direction {ray.direction}");
+                
+                // First try with layer mask
+                if (Physics.Raycast(ray, out hit, 100f, arModelLayer))
+                {
+                    if (enableDebugLogs)
+                        Debug.Log($"[ARScanFeature] ✓ Hit AR model with layer: {hit.collider.gameObject.name}");
+                    
+                    ShowActionButtons();
+                }
+                // Then try without layer mask (any collider)
+                else if (Physics.Raycast(ray, out hit, 100f))
+                {
+                    if (enableDebugLogs)
+                        Debug.Log($"[ARScanFeature] ✓ Hit object: {hit.collider.gameObject.name} on layer: {LayerMask.LayerToName(hit.collider.gameObject.layer)}");
+                    
+                    // Check if it's one of our AR models by name
+                    if (hit.collider.gameObject.name.StartsWith("PF_") || 
+                        hit.collider.transform.root.name.StartsWith("ImageTarget"))
+                    {
+                        ShowActionButtons();
+                    }
+                    else if (enableDebugLogs)
+                    {
+                        Debug.Log($"[ARScanFeature] Hit object is not an AR model");
+                    }
+                }
+                else
+                {
+                    if (enableDebugLogs)
+                        Debug.Log("[ARScanFeature] Raycast hit nothing - showing buttons anyway (fallback)");
+                    
+                    // Fallback: Show buttons on any tap when object is detected
+                    ShowActionButtons();
+                }
             }
             else
             {
-                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            }
-
-            RaycastHit hit;
-            
-            // Check if we hit any AR model
-            if (Physics.Raycast(ray, out hit, 100f, arModelLayer))
-            {
-                Debug.Log($"[ARScanFeature] Tapped on AR model: {hit.collider.gameObject.name}");
+                Debug.LogWarning("[ARScanFeature] AR Camera not assigned!");
+                // Fallback: Show buttons anyway
                 ShowActionButtons();
-            }
-            else
-            {
-                // Alternative: Show buttons on any tap when object is detected
-                // Uncomment this if you want buttons to show on any screen tap
-                // ShowActionButtons();
             }
         }
     }
@@ -181,7 +250,8 @@ public class ARScanFeature : MonoBehaviour
     /// </summary>
     private void ShowActionButtons()
     {
-        Debug.Log("[ARScanFeature] Showing action buttons");
+        if (enableDebugLogs)
+            Debug.Log("[ARScanFeature] Showing action buttons");
         
         if (viewInfoButton != null) viewInfoButton.SetActive(true);
         if (quizButton != null) quizButton.SetActive(true);
@@ -198,7 +268,8 @@ public class ARScanFeature : MonoBehaviour
             return;
         }
 
-        Debug.Log($"[ARScanFeature] Opening dictionary for: {currentDetectedWord.englishName}");
+        if (enableDebugLogs)
+            Debug.Log($"[ARScanFeature] Opening dictionary for: {currentDetectedWord.englishName}");
 
         // Switch to Dictionary panel
         if (scanPanel != null) scanPanel.SetActive(false);
@@ -233,7 +304,9 @@ public class ARScanFeature : MonoBehaviour
     /// </summary>
     public void OnResetClicked()
     {
-        Debug.Log("[ARScanFeature] Resetting scan state");
+        if (enableDebugLogs)
+            Debug.Log("[ARScanFeature] Resetting scan state");
+        
         ResetScanState();
     }
 
