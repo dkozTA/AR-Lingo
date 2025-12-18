@@ -1,57 +1,114 @@
 ﻿using UnityEngine;
 using Vuforia;
 
+/// <summary>
+/// AR Content Trigger - Handles Vuforia image target detection
+/// This script should be attached to each Image Target prefab
+/// The OnTargetFound/OnTargetLost methods are called by DefaultObserverEventHandler via Unity Events
+/// </summary>
 public class ARContentTrigger : MonoBehaviour
 {
     [Header("Target Settings")]
-    [SerializeField] private string animalName = "Cow";
-    [SerializeField] private GameObject animalModel;    // Kéo Pf_Cow vào đây
+    [SerializeField] private string wordID = "Bull"; // Must match WordDatabase ID
+    [SerializeField] private GameObject ar3DModel; // The 3D model (e.g., PF_Bull)
 
-    [Header("Debug Simulation")]
-    public bool isTestMode = true;
+    [Header("Debug")]
+    [SerializeField] private bool enableDebugLogs = true;
 
-    // --- LOGIC XỬ LÝ KHI TÌM THẤY TARGET ---
-    public void OnTargetFound()
+    private void Start()
     {
-        Debug.Log($"[AR] Found Target: {animalName}");
-
-        // 1. Hiện con thú
-        if (animalModel != null)
+        if (enableDebugLogs)
+            Debug.Log($"[ARContentTrigger] Initialized for target: {wordID}");
+        
+        if (ar3DModel != null)
         {
-            animalModel.SetActive(true);
-        }
-
-        // 2. Báo cho GameManager (Thêm kiểm tra Instance != null để tránh lỗi)
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.OnARObjectDetected(animalName);
+            // DEBUG: Log model info at start
+            Debug.Log($"[ARContentTrigger] Model Name: {ar3DModel.name}");
+            Debug.Log($"[ARContentTrigger] Model Position: {ar3DModel.transform.localPosition}");
+            Debug.Log($"[ARContentTrigger] Model Scale: {ar3DModel.transform.localScale}");
+            Debug.Log($"[ARContentTrigger] Model Active Self: {ar3DModel.activeSelf}");
+            
+            // Check for renderer
+            Renderer[] renderers = ar3DModel.GetComponentsInChildren<Renderer>();
+            Debug.Log($"[ARContentTrigger] Found {renderers.Length} renderers in model");
+            foreach (var r in renderers)
+            {
+                string matName = r.sharedMaterial != null ? r.sharedMaterial.name : "None";
+                Debug.Log($"[ARContentTrigger] Renderer: {r.name}, Enabled: {r.enabled}, Material: {matName}");
+            }
+            
+            // Make sure model starts hidden
+            ar3DModel.SetActive(false);
+            if (enableDebugLogs)
+                Debug.Log($"[ARContentTrigger] 3D Model '{ar3DModel.name}' set to inactive");
         }
         else
         {
-            // Cảnh báo nhẹ nếu quên chưa bật GameManager
-            Debug.LogWarning("GameManager chưa được khởi tạo, nhưng AR vẫn chạy.");
+            Debug.LogError($"[ARContentTrigger] AR 3D Model is not assigned for {wordID}!");
         }
     }
 
-    public void OnTargetLost()
+    /// <summary>
+    /// Called by DefaultObserverEventHandler when target is found
+    /// This is connected via Unity Events in the Inspector
+    /// </summary>
+    public void OnTargetFound()
     {
-        Debug.Log($"[AR] Lost Target: {animalName}");
+        if (enableDebugLogs)
+            Debug.Log($"[ARContentTrigger] ✓ Target FOUND: {wordID}");
 
-        // 1. Ẩn con thú
-        if (animalModel != null)
+        // Show the 3D model
+        if (ar3DModel != null)
         {
-            animalModel.SetActive(false);
+            ar3DModel.SetActive(true);
+            
+            // DEBUG: Check after activation
+            Debug.Log($"[ARContentTrigger] ✓ Model activated - Active: {ar3DModel.activeSelf}, ActiveInHierarchy: {ar3DModel.activeInHierarchy}");
+            Debug.Log($"[ARContentTrigger] ✓ Model World Position: {ar3DModel.transform.position}");
+            Debug.Log($"[ARContentTrigger] ✓ ImageTarget Position: {transform.position}");
+            
+            if (enableDebugLogs)
+                Debug.Log($"[ARContentTrigger] ✓ 3D Model '{ar3DModel.name}' activated");
+        }
+        else
+        {
+            Debug.LogError($"[ARContentTrigger] Cannot show model - ar3DModel is null!");
         }
 
-        // 2. Báo GameManager
+        // Notify GameManager
         if (GameManager.Instance != null)
         {
-            GameManager.Instance.OnARObjectLost();
+            GameManager.Instance.OnARObjectDetected(wordID);
+            if (enableDebugLogs)
+                Debug.Log($"[ARContentTrigger] ✓ Notified GameManager about {wordID}");
+        }
+        else
+        {
+            Debug.LogWarning("[ARContentTrigger] GameManager not found!");
         }
     }
 
-    private void Update()
+    /// <summary>
+    /// Called by DefaultObserverEventHandler when target is lost
+    /// This is connected via Unity Events in the Inspector
+    /// </summary>
+    public void OnTargetLost()
     {
-        
+        if (enableDebugLogs)
+            Debug.Log($"[ARContentTrigger] ✗ Target LOST: {wordID}");
+
+        // Hide the 3D model
+        if (ar3DModel != null)
+        {
+            ar3DModel.SetActive(false);
+            if (enableDebugLogs)
+                Debug.Log($"[ARContentTrigger] ✗ 3D Model '{ar3DModel.name}' deactivated");
+        }
+
+        // Notify GameManager
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.NotifyARObjectLost();
+        }
     }
 }

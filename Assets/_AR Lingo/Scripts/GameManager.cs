@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
     // 2. Báo tin khi xác định được con vật cụ thể (để UI load nội dung tương ứng)
     public event Action<string> OnAnimalDetected;
 
+    // 3. Báo tin khi AR target bị mất (camera không còn nhìn thấy thẻ)
+    public event Action OnARObjectLost;
+
     // Property để các script khác có thể lấy tên con vật hiện tại bất cứ lúc nào
     public string CurrentAnimalID => _currentAnimalID;
 
@@ -72,13 +75,17 @@ public class GameManager : MonoBehaviour
         OnAnimalDetected?.Invoke(animalID);
     }
 
-    public void OnARObjectLost()
+    // Hàm này được gọi từ script ARContentTrigger khi mất target
+    public void NotifyARObjectLost()
     {
         // Khi mất dấu thẻ, quay về trạng thái Scanning
         Debug.Log("[GameManager] Target Lost. Resetting to Scan mode.");
 
         _currentAnimalID = null; // Xóa dữ liệu cũ
         ChangeState(AppState.ARScanning);
+
+        // Bắn event để UI biết
+        OnARObjectLost?.Invoke();
     }
 
     // --- HÀM ĐIỀU KHIỂN LUỒNG (Flow Control) ---

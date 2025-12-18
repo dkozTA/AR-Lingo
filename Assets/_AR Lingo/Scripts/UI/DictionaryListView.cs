@@ -15,7 +15,7 @@ public class DictionaryListView : MonoBehaviour
     [SerializeField] private GameObject listViewPanel;    // Panel showing the grid
     [SerializeField] private GameObject detailViewPanel;  // Panel showing word details
     [SerializeField] private GameObject listViewBackButton; // Button_Back in Panel_ListView (to hide in detail view)
-    [SerializeField] private GameObject header; // Header
+    [SerializeField] private GameObject header; // Header for list view
 
     [Header("Database")]
     [SerializeField] private WordDatabase wordDatabase;
@@ -26,28 +26,54 @@ public class DictionaryListView : MonoBehaviour
 
     [Header("Grid Settings")]
     [SerializeField] private int columnsPerRow = 2; // Number of columns in the grid (default: 2 columns)
-    [SerializeField] private Vector2 cellSize = new Vector2(200, 250); // Size of each grid cell
+    [SerializeField] private Vector2 cellSize = new Vector2(180, 220); // Size of each grid cell
     [SerializeField] private Vector2 spacing = new Vector2(10, 10); // Spacing between grid items
+    
+    [Header("Grid Padding")]
+    [SerializeField] private int paddingLeft = 10;
+    [SerializeField] private int paddingRight = 10;
+    [SerializeField] private int paddingTop = 10;
+    [SerializeField] private int paddingBottom = 10;
 
     private List<WordItemUI> currentWordItems = new List<WordItemUI>();
+    private bool isInitialized = false; // Track if we've loaded words already
+    private GridLayoutGroup cachedGridLayout; // Cache the grid layout component
+
+    void Awake()
+    {
+        // Cache the grid layout component
+        if (wordListContainer != null)
+        {
+            cachedGridLayout = wordListContainer.GetComponent<GridLayoutGroup>();
+            if (cachedGridLayout == null)
+            {
+                cachedGridLayout = wordListContainer.gameObject.AddComponent<GridLayoutGroup>();
+            }
+        }
+    }
 
     void OnEnable()
     {
-        // Khi DictionaryListView được bật (thường là lúc mở Panel_Dictionary từ Home),
-        // luôn đảm bảo hiển thị danh sách trước, ẩn màn detail.
+        // Show list view first
         ShowListView();
 
+        // Setup search listeners
         if (searchButton != null)
             searchButton.onClick.AddListener(OnSearchClicked);
         
         if (searchInputField != null)
             searchInputField.onValueChanged.AddListener(OnSearchTextChanged);
 
-        LoadWordList();
+        // Only load word list once or if list is empty
+        if (!isInitialized || currentWordItems.Count == 0)
+        {
+            LoadWordList();
+        }
     }
 
     void OnDisable()
     {
+        // Remove search listeners
         if (searchButton != null)
             searchButton.onClick.RemoveListener(OnSearchClicked);
         
@@ -78,10 +104,13 @@ public class DictionaryListView : MonoBehaviour
             return;
         }
 
-        // Setup Grid Layout Group if it exists
-        SetupGridLayout();
+        // Setup Grid Layout Group ONCE
+        if (!isInitialized)
+        {
+            SetupGridLayout();
+        }
 
-        // Clear existing items
+        // Clear existing items safely
         ClearWordList();
 
         // Get all words from database
@@ -109,31 +138,35 @@ public class DictionaryListView : MonoBehaviour
             currentWordItems.Add(wordItem);
         }
 
+        isInitialized = true;
         Debug.Log($"DictionaryListView: Loaded {allWords.Count} words in grid");
     }
 
     /// <summary>
-    /// Setup Grid Layout Group component on the container
+    /// Setup Grid Layout Group component on the container - ONLY CALLED ONCE
     /// </summary>
     private void SetupGridLayout()
     {
-        GridLayoutGroup gridLayout = wordListContainer.GetComponent<GridLayoutGroup>();
-        
-        if (gridLayout == null)
+        if (cachedGridLayout == null)
         {
-            // Add Grid Layout Group if it doesn't exist
-            gridLayout = wordListContainer.gameObject.AddComponent<GridLayoutGroup>();
-            Debug.Log("DictionaryListView: Added Grid Layout Group component to container");
+            Debug.LogError("DictionaryListView: Grid Layout Group is not initialized!");
+            return;
         }
 
-        // Configure grid settings
-        gridLayout.cellSize = cellSize;
-        gridLayout.spacing = spacing;
-        gridLayout.startCorner = GridLayoutGroup.Corner.UpperLeft;
-        gridLayout.startAxis = GridLayoutGroup.Axis.Horizontal;
-        gridLayout.childAlignment = TextAnchor.UpperLeft;
-        gridLayout.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-        gridLayout.constraintCount = columnsPerRow;
+        // Configure grid settings using the inspector values
+        cachedGridLayout.cellSize = cellSize;
+        cachedGridLayout.spacing = spacing;
+        
+        // Set padding using individual values
+        cachedGridLayout.padding = new RectOffset(paddingLeft, paddingRight, paddingTop, paddingBottom);
+        
+        cachedGridLayout.startCorner = GridLayoutGroup.Corner.UpperLeft;
+        cachedGridLayout.startAxis = GridLayoutGroup.Axis.Horizontal;
+        cachedGridLayout.childAlignment = TextAnchor.UpperLeft;
+        cachedGridLayout.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
+        cachedGridLayout.constraintCount = columnsPerRow;
+
+        Debug.Log($"Grid Layout configured: CellSize={cellSize}, Spacing={spacing}, Columns={columnsPerRow}, Padding=({paddingLeft},{paddingRight},{paddingTop},{paddingBottom})");
     }
 
     /// <summary>
@@ -154,10 +187,9 @@ public class DictionaryListView : MonoBehaviour
             if (listViewBackButton != null)
                 listViewBackButton.SetActive(false);
 
-            // Hide header when in detail view
-            if (header != null) {
+            // Hide header in detail view
+            if (header != null)
                 header.SetActive(false);
-            }
 
             // Display word in detail view
             dictionaryDetailView.DisplayWord(wordData, fromARView: false);
@@ -188,7 +220,7 @@ public class DictionaryListView : MonoBehaviour
         if (listViewBackButton != null)
             listViewBackButton.SetActive(true);
 
-        // Show header when in list view
+        // Show header in list view
         if (header != null)
             header.SetActive(true);
     }
@@ -216,7 +248,7 @@ public class DictionaryListView : MonoBehaviour
             // Show all words
             foreach (var item in currentWordItems)
             {
-                if (item != null)
+                if (item != null && item.gameObject != null)
                     item.gameObject.SetActive(true);
             }
             return;
@@ -225,7 +257,7 @@ public class DictionaryListView : MonoBehaviour
         searchText = searchText.ToLower();
         foreach (var item in currentWordItems)
         {
-            if (item != null && item.WordData != null)
+            if (item != null && item.gameObject != null && item.WordData != null)
             {
                 bool matches = item.WordData.englishName.ToLower().Contains(searchText) ||
                               item.WordData.vietnameseName.ToLower().Contains(searchText);
@@ -234,13 +266,42 @@ public class DictionaryListView : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Clear word list safely - handles null references
+    /// </summary>
     private void ClearWordList()
     {
-        foreach (var item in currentWordItems)
+        // Destroy all child objects in the container
+        if (wordListContainer != null)
         {
-            if (item != null)
-                Destroy(item.gameObject);
+            // Get all children and destroy them
+            foreach (Transform child in wordListContainer)
+            {
+                if (child != null && child.gameObject != null)
+                {
+                    Destroy(child.gameObject);
+                }
+            }
         }
-        currentWordItems.Clear();
+
+        // Clear the list (remove null references too)
+        if (currentWordItems != null)
+        {
+            currentWordItems.Clear();
+        }
+        else
+        {
+            // Initialize list if it was null
+            currentWordItems = new List<WordItemUI>();
+        }
+    }
+
+    /// <summary>
+    /// Force reload the word list
+    /// </summary>
+    public void ReloadWordList()
+    {
+        isInitialized = false;
+        LoadWordList();
     }
 }
