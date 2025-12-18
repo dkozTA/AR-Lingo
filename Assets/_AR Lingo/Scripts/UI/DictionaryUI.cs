@@ -7,7 +7,9 @@ public class DictionaryUI : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private TextMeshProUGUI englishNameText;
     [SerializeField] private TextMeshProUGUI vietnameseNameText;
+    [SerializeField] private TextMeshProUGUI pronunciationText;  // NEW: Phiên âm
     [SerializeField] private TextMeshProUGUI descriptionText;
+    [SerializeField] private TextMeshProUGUI vietnameseDescriptionText; // NEW: Mô tả tiếng Việt
     [SerializeField] private Image iconImage;
     [SerializeField] private Button playPronunciationButton;
     [SerializeField] private Button backButton;
@@ -20,7 +22,7 @@ public class DictionaryUI : MonoBehaviour
     [SerializeField] private GameObject homePanel;
     [SerializeField] private GameObject scanPanel;
     [SerializeField] private SimpleMenuController menuController;
-    [SerializeField] private ARScanFeature arScanFeature; // Changed from mockScanFeature
+    [SerializeField] private ARScanFeature arScanFeature;
     [SerializeField] private DictionaryListView listView;
 
     private WordData currentWordData;
@@ -76,8 +78,37 @@ public class DictionaryUI : MonoBehaviour
         if (vietnameseNameText != null)
             vietnameseNameText.text = wordData.vietnameseName;
 
+        // NEW: Display pronunciation
+        if (pronunciationText != null)
+        {
+            if (!string.IsNullOrEmpty(wordData.pronunciation))
+            {
+                pronunciationText.text = wordData.pronunciation;
+                pronunciationText.gameObject.SetActive(true);
+            }
+            else
+            {
+                pronunciationText.gameObject.SetActive(false);
+            }
+        }
+
+        // Display English description
         if (descriptionText != null)
             descriptionText.text = wordData.description;
+
+        // NEW: Display Vietnamese description
+        if (vietnameseDescriptionText != null)
+        {
+            if (!string.IsNullOrEmpty(wordData.vietnameseDescription))
+            {
+                vietnameseDescriptionText.text = wordData.vietnameseDescription;
+                vietnameseDescriptionText.gameObject.SetActive(true);
+            }
+            else
+            {
+                vietnameseDescriptionText.gameObject.SetActive(false);
+            }
+        }
 
         if (iconImage != null && wordData.icon2D != null)
         {
@@ -174,9 +205,21 @@ public class DictionaryUI : MonoBehaviour
         
         if (vietnameseNameText != null)
             vietnameseNameText.text = "";
+
+        if (pronunciationText != null)
+        {
+            pronunciationText.text = "";
+            pronunciationText.gameObject.SetActive(false);
+        }
         
         if (descriptionText != null)
             descriptionText.text = "";
+
+        if (vietnameseDescriptionText != null)
+        {
+            vietnameseDescriptionText.text = "";
+            vietnameseDescriptionText.gameObject.SetActive(false);
+        }
         
         if (iconImage != null)
             iconImage.gameObject.SetActive(false);

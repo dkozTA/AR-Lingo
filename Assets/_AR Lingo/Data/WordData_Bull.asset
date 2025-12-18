@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: WordData_Bull
   m_EditorClassIdentifier: Assembly-CSharp::WordData
   id: Bull
+  category: 0
   englishName: Bull
   vietnameseName: "B\xF2 t\xF3t"
+  pronunciation: "/b\u028Al/"
   description: An intact adult male of the species Bos taurus.
+  vietnameseDescription: "M\u1ED9t con \u0111\u1EF1c tr\u01B0\u1EDFng th\xE0nh c\xF2n
+    nguy\xEAn v\u1EB9n thu\u1ED9c lo\xE0i Bos taurus."
   modelPrefab: {fileID: 4706989081468748772, guid: ec2326ae8fb9e884db8a8ef473e578b9, type: 3}
   icon2D: {fileID: 21300000, guid: 920dfd08e785dcb42ac529fc2bf96ead, type: 3}
   audioPronounce: {fileID: 8300000, guid: 2627fa5de4979b7448ce5e906317c7f4, type: 3}
   audioSFX: {fileID: 8300000, guid: 8263d6f114becbe43b637e07d59d6ef5, type: 3}
+  hasAnimations: 1
+  walkAnimationName: Walk
+  attackAnimationName: Attack

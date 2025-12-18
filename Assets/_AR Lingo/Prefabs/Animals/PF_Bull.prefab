@@ -876,6 +876,7 @@ GameObject:
   - component: {fileID: 5047741884486966329}
   - component: {fileID: 6687651956039678797}
   - component: {fileID: 6548617873552836403}
+  - component: {fileID: 1786119119407137411}
   m_Layer: 0
   m_Name: PF_Bull
   m_TagString: Untagged
@@ -1031,6 +1032,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnimalInteraction
   sfxAnimal: {fileID: 8300000, guid: 8263d6f114becbe43b637e07d59d6ef5, type: 3}
   sfxName: {fileID: 8300000, guid: 2627fa5de4979b7448ce5e906317c7f4, type: 3}
+--- !u!95 &1786119119407137411
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4706989081468748772}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ff56d8142d0023488c0d964f72c4539, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4739723019400458303
 GameObject:
   m_ObjectHideFlags: 0

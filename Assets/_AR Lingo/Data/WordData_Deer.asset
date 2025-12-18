@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: WordData_Deer
   m_EditorClassIdentifier: Assembly-CSharp::WordData
   id: Deer
+  category: 0
   englishName: Deer
   vietnameseName: "Con h\u01B0\u01A1u"
+  pronunciation: 
   description: Hoofed ruminant mammals forming the family Cervidae.
+  vietnameseDescription: "C\xE1c lo\xE0i \u0111\u1ED9ng v\u1EADt c\xF3 v\xFA nhai
+    l\u1EA1i c\xF3 m\xF3ng gu\u1ED1c thu\u1ED9c h\u1ECD Cervidae."
   modelPrefab: {fileID: 8604027563084526486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
   icon2D: {fileID: 21300000, guid: c383ea5f6230edc41a5f983157c2a9e3, type: 3}
   audioPronounce: {fileID: 8300000, guid: f3082e5788770b34ebf44ec53dae2944, type: 3}
   audioSFX: {fileID: 8300000, guid: b18a16ef6f39f5a4299d4baaacabb5a9, type: 3}
+  hasAnimations: 1
+  walkAnimationName: Walk
+  attackAnimationName: Attack
