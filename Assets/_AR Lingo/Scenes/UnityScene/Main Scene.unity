@@ -119,15 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!1 &25390866
-=======
 --- !u!1 &17238872
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!1 &17238872
->>>>>>> origin/main
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,67 +127,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  - component: {fileID: 25390867}
-  - component: {fileID: 25390869}
-  - component: {fileID: 25390868}
-  m_Layer: 5
-  m_Name: QuestionCard
-=======
-=======
->>>>>>> origin/main
   - component: {fileID: 17238873}
   - component: {fileID: 17238875}
   - component: {fileID: 17238874}
   m_Layer: 5
   m_Name: Text (Legacy)
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!224 &25390867
-=======
 --- !u!224 &17238873
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!224 &17238873
->>>>>>> origin/main
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 25390866}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 559333531}
-  - {fileID: 1987433781}
-  - {fileID: 911641168}
-  - {fileID: 649449096}
-  m_Father: {fileID: 1749895118}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00082651, y: 281.4692}
-  m_SizeDelta: {x: 983.34, y: 1022.2389}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &25390868
-=======
-=======
->>>>>>> origin/main
   m_GameObject: {fileID: 17238872}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -210,28 +157,11 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &17238874
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 25390866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-=======
-=======
->>>>>>> origin/main
   m_GameObject: {fileID: 17238872}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -240,32 +170,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &25390869
-=======
-=======
->>>>>>> origin/main
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -281,24 +191,12 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: Button
 --- !u!222 &17238875
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 25390866}
-=======
   m_GameObject: {fileID: 17238872}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 17238872}
->>>>>>> origin/main
   m_CullTransparentMesh: 1
 --- !u!1 &86351747
 GameObject:
@@ -458,11 +356,7 @@ RectTransform:
   m_GameObject: {fileID: 120970444}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-  m_LocalScale: {x: 1.0118, y: 1.0118, z: 1.0118}
-=======
   m_LocalScale: {x: 1, y: 1, z: 1}
->>>>>>> origin/main
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 619812443}
@@ -531,26 +425,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 80
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Back
---- !u!222 &140015728
-=======
-=======
->>>>>>> origin/main
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -562,10 +436,6 @@ MonoBehaviour:
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &130618055
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1025,15 +895,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!1 &219817591
-=======
 --- !u!1 &316712288
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!1 &316712288
->>>>>>> origin/main
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1041,212 +903,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  - component: {fileID: 219817592}
-  - component: {fileID: 219817594}
-  - component: {fileID: 219817593}
-  m_Layer: 5
-  m_Name: Text (TMP)
-=======
-=======
->>>>>>> origin/main
   - component: {fileID: 316712289}
   - component: {fileID: 316712292}
   - component: {fileID: 316712291}
   - component: {fileID: 316712290}
   m_Layer: 5
   m_Name: Button_ViewInfo
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_IsActive: 1
---- !u!224 &219817592
-=======
   m_IsActive: 0
 --- !u!224 &316712289
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_IsActive: 0
---- !u!224 &316712289
->>>>>>> origin/main
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 219817591}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 757030265}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &219817593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219817591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Button
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &219817594
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219817591}
-  m_CullTransparentMesh: 1
---- !u!1 &255815613
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 255815614}
-  - component: {fileID: 255815617}
-  - component: {fileID: 255815616}
-  - component: {fileID: 255815615}
-  m_Layer: 5
-  m_Name: Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &255815614
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255815613}
-=======
   m_GameObject: {fileID: 316712288}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 316712288}
->>>>>>> origin/main
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  - {fileID: 1048812525}
-  m_Father: {fileID: 1749895118}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.64642406, y: 0.5396481}
-  m_AnchoredPosition: {x: 42.925, y: 1013.7012}
-  m_SizeDelta: {x: 609.52, y: 112.5428}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &255815615
-=======
-=======
->>>>>>> origin/main
   - {fileID: 947076079}
   m_Father: {fileID: 2122671221}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1256,24 +935,12 @@ RectTransform:
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &316712290
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 255815613}
-=======
   m_GameObject: {fileID: 316712288}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 316712288}
->>>>>>> origin/main
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -1307,16 +974,6 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_TargetGraphic: {fileID: 255815616}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &255815616
-=======
-=======
->>>>>>> origin/main
   m_TargetGraphic: {fileID: 316712291}
   m_OnClick:
     m_PersistentCalls:
@@ -1334,39 +991,19 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &316712291
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 255815613}
-=======
   m_GameObject: {fileID: 316712288}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 316712288}
->>>>>>> origin/main
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> origin/main
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1383,35 +1020,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!222 &255815617
-=======
 --- !u!222 &316712292
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!222 &316712292
->>>>>>> origin/main
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 255815613}
-  m_CullTransparentMesh: 1
---- !u!1 &416907792
-=======
   m_GameObject: {fileID: 316712288}
   m_CullTransparentMesh: 1
 --- !u!1 &340075839
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 316712288}
-  m_CullTransparentMesh: 1
---- !u!1 &340075839
->>>>>>> origin/main
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1419,14 +1036,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  - component: {fileID: 416907793}
-  - component: {fileID: 416907795}
-  - component: {fileID: 416907794}
-=======
-=======
->>>>>>> origin/main
   - component: {fileID: 340075840}
   - component: {fileID: 340075842}
   - component: {fileID: 340075841}
@@ -1505,10 +1114,6 @@ GameObject:
   - component: {fileID: 472974056}
   - component: {fileID: 472974058}
   - component: {fileID: 472974057}
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1516,72 +1121,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!224 &416907793
-=======
 --- !u!224 &472974056
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!224 &472974056
->>>>>>> origin/main
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 416907792}
-=======
   m_GameObject: {fileID: 472974055}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 472974055}
->>>>>>> origin/main
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_Father: {fileID: 872425418}
-=======
   m_Father: {fileID: 1785717606}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_Father: {fileID: 1785717606}
->>>>>>> origin/main
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!114 &416907794
-=======
 --- !u!114 &472974057
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!114 &472974057
->>>>>>> origin/main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 416907792}
-=======
   m_GameObject: {fileID: 472974055}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 472974055}
->>>>>>> origin/main
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -1595,15 +1160,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_text: Button
-=======
   m_text: Back
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_text: Back
->>>>>>> origin/main
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1674,35 +1231,15 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!222 &416907795
-=======
 --- !u!222 &472974058
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!222 &472974058
->>>>>>> origin/main
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 416907792}
-  m_CullTransparentMesh: 1
---- !u!1 &442464164
-=======
   m_GameObject: {fileID: 472974055}
   m_CullTransparentMesh: 1
 --- !u!1 &515022966
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 472974055}
-  m_CullTransparentMesh: 1
---- !u!1 &515022966
->>>>>>> origin/main
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1710,72 +1247,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  - component: {fileID: 442464165}
-  - component: {fileID: 442464167}
-  - component: {fileID: 442464166}
-  m_Layer: 5
-  m_Name: Text (TMP)
-=======
-=======
->>>>>>> origin/main
   - component: {fileID: 515022967}
   - component: {fileID: 515022970}
   - component: {fileID: 515022969}
   - component: {fileID: 515022968}
   m_Layer: 5
   m_Name: Scrollbar Vertical
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!224 &442464165
-=======
 --- !u!224 &515022967
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!224 &515022967
->>>>>>> origin/main
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 442464164}
-=======
   m_GameObject: {fileID: 515022966}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 515022966}
->>>>>>> origin/main
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_Children: []
-  m_Father: {fileID: 1481243592}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &442464166
-=======
-=======
->>>>>>> origin/main
   m_Children:
   - {fileID: 120970445}
   m_Father: {fileID: 1684569033}
@@ -1786,26 +1279,11 @@ RectTransform:
   m_SizeDelta: {x: 20, y: -17}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &515022968
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 442464164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-=======
-=======
->>>>>>> origin/main
   m_GameObject: {fileID: 515022966}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1861,10 +1339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -1873,83 +1347,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_text: Button
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &442464167
-=======
-=======
->>>>>>> origin/main
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -1961,24 +1358,12 @@ MonoBehaviour:
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &515022970
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 442464164}
-=======
   m_GameObject: {fileID: 515022966}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 515022966}
->>>>>>> origin/main
   m_CullTransparentMesh: 1
 --- !u!1 &528133917
 GameObject:
@@ -2059,145 +1444,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528133917}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
---- !u!1 &559333528
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 559333531}
-  - component: {fileID: 559333530}
-  - component: {fileID: 559333529}
-  m_Layer: 5
-  m_Name: Text_Progress
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &559333529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559333528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Question 1 of
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 36.10939, y: 0, z: 22.978668, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &559333530
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559333528}
-  m_CullTransparentMesh: 1
---- !u!224 &559333531
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559333528}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 25390867}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000034332, y: 564.04}
-  m_SizeDelta: {x: 900.563, y: 115.057}
-  m_Pivot: {x: 0.5, y: 0.5}
-=======
->>>>>>> origin/main
 --- !u!1 &573728011
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,15 +1523,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573728011}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!1 &649449093
-=======
 --- !u!1 &607343117
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!1 &607343117
->>>>>>> origin/main
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2293,36 +1531,16 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  - component: {fileID: 649449096}
-  - component: {fileID: 649449095}
-  - component: {fileID: 649449094}
-  m_Layer: 5
-  m_Name: Text_QuestionVN
-=======
-=======
->>>>>>> origin/main
   - component: {fileID: 607343118}
   - component: {fileID: 607343120}
   - component: {fileID: 607343119}
   m_Layer: 5
   m_Name: Text (TMP)
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!114 &649449094
-=======
-=======
->>>>>>> origin/main
 --- !u!224 &607343118
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2343,24 +1561,12 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &607343119
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 649449093}
-=======
   m_GameObject: {fileID: 607343117}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 607343117}
->>>>>>> origin/main
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -2374,15 +1580,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_text: "Con n\xE0y t\xEAn l\xE0 g\xEC ?"
-=======
   m_text: Back Home
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_text: Back Home
->>>>>>> origin/main
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2391,18 +1589,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-    rgba: 4278255360
-  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
-=======
     rgba: 4281479730
   m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
->>>>>>> origin/main
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2419,33 +1607,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_fontSize: 60
-  m_fontSizeBase: 60
-=======
   m_fontSize: 24
   m_fontSizeBase: 24
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_fontSize: 24
-  m_fontSizeBase: 24
->>>>>>> origin/main
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_VerticalAlignment: 256
-=======
   m_VerticalAlignment: 512
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_VerticalAlignment: 512
->>>>>>> origin/main
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2481,28 +1651,12 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!222 &649449095
-=======
 --- !u!222 &607343120
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!222 &607343120
->>>>>>> origin/main
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 649449093}
-  m_CullTransparentMesh: 1
---- !u!224 &649449096
-=======
-=======
->>>>>>> origin/main
   m_GameObject: {fileID: 607343117}
   m_CullTransparentMesh: 1
 --- !u!1 &619812442
@@ -2524,43 +1678,17 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &619812443
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 649449093}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-=======
   m_GameObject: {fileID: 619812442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 619812442}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
->>>>>>> origin/main
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_Father: {fileID: 25390867}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.442, y: -361}
-  m_SizeDelta: {x: 579.86, y: 108.065}
-  m_Pivot: {x: 0.5, y: 0.5}
-=======
-=======
->>>>>>> origin/main
   m_Father: {fileID: 120970445}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2606,10 +1734,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619812442}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 --- !u!1 &654716118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2847,148 +1971,7 @@ RectTransform:
   m_AnchoredPosition: {x: -376, y: 888}
   m_SizeDelta: {x: 65.373, y: 40.6463}
   m_Pivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!1 &659630006
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 659630007}
-  - component: {fileID: 659630010}
-  - component: {fileID: 659630009}
-  - component: {fileID: 659630008}
-  m_Layer: 5
-  m_Name: Btn_Answer_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &659630007
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659630006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1154887335}
-  m_Father: {fileID: 1749895118}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.729, y: -865}
-  m_SizeDelta: {x: 600, y: 120}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &659630008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659630006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 659630009}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1749895121}
-        m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
-        m_MethodName: OnClickAnswer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &659630009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659630006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9803922, b: 0.9803922, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &659630010
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659630006}
-  m_CullTransparentMesh: 1
---- !u!1 &703116618
-=======
 --- !u!1 &686307669
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!1 &686307669
->>>>>>> origin/main
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3153,12 +2136,6 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1029796140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!1 &757030261
-=======
-=======
->>>>>>> origin/main
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -3207,10 +2184,6 @@ CanvasRenderer:
   m_GameObject: {fileID: 699612714}
   m_CullTransparentMesh: 1
 --- !u!1 &788061030
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3218,38 +2191,17 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  - component: {fileID: 757030265}
-  - component: {fileID: 757030264}
-  - component: {fileID: 757030263}
-  - component: {fileID: 757030262}
-  m_Layer: 5
-  m_Name: Btn_Answer_0
-=======
-=======
->>>>>>> origin/main
   - component: {fileID: 788061031}
   - component: {fileID: 788061034}
   - component: {fileID: 788061033}
   - component: {fileID: 788061032}
   m_Layer: 5
   m_Name: Button_Back
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!114 &757030262
-=======
-=======
->>>>>>> origin/main
 --- !u!224 &788061031
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3271,24 +2223,12 @@ RectTransform:
   m_SizeDelta: {x: 323.55, y: 114.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &788061032
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 757030261}
-=======
   m_GameObject: {fileID: 788061030}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 788061030}
->>>>>>> origin/main
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -3322,19 +2262,6 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_TargetGraphic: {fileID: 757030263}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1749895121}
-        m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
-        m_MethodName: OnClickAnswer
-        m_Mode: 3
-=======
-=======
->>>>>>> origin/main
   m_TargetGraphic: {fileID: 788061033}
   m_OnClick:
     m_PersistentCalls:
@@ -3343,10 +2270,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: DictionaryUI, Assembly-CSharp
         m_MethodName: OnBackClicked
         m_Mode: 1
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3355,44 +2278,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!114 &757030263
-=======
 --- !u!114 &788061033
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!114 &788061033
->>>>>>> origin/main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 757030261}
-=======
   m_GameObject: {fileID: 788061030}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 788061030}
->>>>>>> origin/main
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_Color: {r: 1, g: 0.9803922, b: 0.9803922, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> origin/main
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3409,52 +2308,14 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!222 &757030264
-=======
 --- !u!222 &788061034
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!222 &788061034
->>>>>>> origin/main
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 757030261}
-  m_CullTransparentMesh: 1
---- !u!224 &757030265
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 757030261}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 219817592}
-  m_Father: {fileID: 1749895118}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.729, y: -355}
-  m_SizeDelta: {x: 600, y: 120}
-  m_Pivot: {x: 0.5, y: 0.5}
-=======
   m_GameObject: {fileID: 788061030}
   m_CullTransparentMesh: 1
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_GameObject: {fileID: 788061030}
-  m_CullTransparentMesh: 1
->>>>>>> origin/main
 --- !u!1 &791042775
 GameObject:
   m_ObjectHideFlags: 0
@@ -3627,278 +2488,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793388101}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!1 &851252689
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 851252690}
-  - component: {fileID: 851252693}
-  - component: {fileID: 851252692}
-  - component: {fileID: 851252691}
-  m_Layer: 5
-  m_Name: Button_Back
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &851252690
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851252689}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
-  m_LocalScale: {x: 2.878439, y: 2.878439, z: 2.878439}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1171592765}
-  m_Father: {fileID: 654716119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -294.00003, y: 894}
-  m_SizeDelta: {x: 70.1212, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &851252691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851252689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 851252692}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1430969268}
-        m_TargetAssemblyTypeName: SimpleMenuController, Assembly-CSharp
-        m_MethodName: BackToHome
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &851252692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851252689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &851252693
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851252689}
-  m_CullTransparentMesh: 1
---- !u!1 &872425414
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 872425418}
-  - component: {fileID: 872425417}
-  - component: {fileID: 872425416}
-  - component: {fileID: 872425415}
-  m_Layer: 5
-  m_Name: Btn_Answer_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &872425415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872425414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 872425416}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1749895121}
-        m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
-        m_MethodName: OnClickAnswer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &872425416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872425414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9803922, b: 0.9803922, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &872425417
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872425414}
-  m_CullTransparentMesh: 1
---- !u!224 &872425418
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872425414}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 416907793}
-  m_Father: {fileID: 1749895118}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.729, y: -694}
-  m_SizeDelta: {x: 600, y: 150}
-  m_Pivot: {x: 0.5, y: 0.5}
-=======
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 --- !u!1 &889012801
 GameObject:
   m_ObjectHideFlags: 0
@@ -3978,145 +2567,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889012801}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
---- !u!1 &911641165
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 911641168}
-  - component: {fileID: 911641167}
-  - component: {fileID: 911641166}
-  m_Layer: 5
-  m_Name: Text_QuestionEN
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &911641166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911641165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: What is this animal?
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278255360
-  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &911641167
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911641165}
-  m_CullTransparentMesh: 1
---- !u!224 &911641168
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911641165}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 25390867}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.442, y: -213}
-  m_SizeDelta: {x: 579.86, y: 108.065}
-  m_Pivot: {x: 0.5, y: 0.5}
-=======
->>>>>>> origin/main
 --- !u!1 &912310033
 GameObject:
   m_ObjectHideFlags: 0
@@ -4649,11 +3099,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 12, y: 408}
-=======
   m_AnchoredPosition: {x: 10, y: -79}
->>>>>>> origin/main
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1005834446
@@ -4776,289 +3222,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!1 &1048812524
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1048812525}
-  - component: {fileID: 1048812527}
-  - component: {fileID: 1048812526}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1048812525
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048812524}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 255815614}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.8048706, y: -4.367996}
-  m_SizeDelta: {x: 9.6099, y: -8.736}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1048812526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048812524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 'Quizz
-
-'
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1048812527
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048812524}
-  m_CullTransparentMesh: 1
---- !u!1 &1154887334
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1154887335}
-  - component: {fileID: 1154887337}
-  - component: {fileID: 1154887336}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1154887335
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154887334}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 659630007}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1154887336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154887334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Button
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1154887337
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154887334}
-  m_CullTransparentMesh: 1
---- !u!1 &1171592764
-=======
 --- !u!1 &1029796139
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!1 &1029796139
->>>>>>> origin/main
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6022,11 +4186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 15, y: -420}
-=======
   m_AnchoredPosition: {x: 12, y: -833}
->>>>>>> origin/main
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1252381983
@@ -6315,11 +4475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 12, y: -15.000004}
-=======
   m_AnchoredPosition: {x: 15, y: -467}
->>>>>>> origin/main
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1351906560
@@ -6505,11 +4661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 0, y: -39}
-=======
   m_AnchoredPosition: {x: 1, y: 4}
->>>>>>> origin/main
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1441481736
@@ -6550,142 +4702,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441481734}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
---- !u!1 &1481243588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1481243592}
-  - component: {fileID: 1481243591}
-  - component: {fileID: 1481243590}
-  - component: {fileID: 1481243589}
-  m_Layer: 5
-  m_Name: Btn_Answer_1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1481243589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481243588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1481243590}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1749895121}
-        m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
-        m_MethodName: OnClickAnswer
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1481243590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481243588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9803922, b: 0.9803922, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1481243591
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481243588}
-  m_CullTransparentMesh: 1
---- !u!224 &1481243592
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481243588}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 442464165}
-  m_Father: {fileID: 1749895118}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.729, y: -522}
-  m_SizeDelta: {x: 600, y: 120}
-  m_Pivot: {x: 0.5, y: 0.5}
-=======
->>>>>>> origin/main
 --- !u!1 &1563661448
 GameObject:
   m_ObjectHideFlags: 0
@@ -7141,22 +5157,13 @@ GameObject:
   - component: {fileID: 1749895118}
   - component: {fileID: 1749895120}
   - component: {fileID: 1749895119}
-<<<<<<< HEAD
-  - component: {fileID: 1749895121}
-  - component: {fileID: 1749895122}
-=======
->>>>>>> origin/main
   m_Layer: 5
   m_Name: Panel_Quizz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-<<<<<<< HEAD
-  m_IsActive: 1
-=======
   m_IsActive: 0
->>>>>>> origin/main
 --- !u!224 &1749895118
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7169,32 +5176,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  - {fileID: 2041105783}
-  - {fileID: 25390867}
-  - {fileID: 757030265}
-  - {fileID: 1481243592}
-  - {fileID: 872425418}
-  - {fileID: 659630007}
-  - {fileID: 255815614}
-=======
   - {fileID: 1029796140}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  - {fileID: 1029796140}
->>>>>>> origin/main
   m_Father: {fileID: 207668976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 0, y: -95.78613}
-  m_SizeDelta: {x: 0, y: -191.57}
-=======
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
->>>>>>> origin/main
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1749895119
 MonoBehaviour:
@@ -7209,11 +5197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> origin/main
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7238,12 +5222,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749895117}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!114 &1749895121
-=======
-=======
->>>>>>> origin/main
 --- !u!1 &1785717605
 GameObject:
   m_ObjectHideFlags: 0
@@ -7284,131 +5262,11 @@ RectTransform:
   m_SizeDelta: {x: 139.3783, y: 66.562}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1785717607
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 1749895117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efeb8f38040ea2b46933463ad6a0dc85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuizManager
-  imageAnimal: {fileID: 1987433779}
-  textProgress: {fileID: 559333529}
-  textQuestionEn: {fileID: 911641166}
-  textQuestionVi: {fileID: 649449094}
-  answerButtons:
-  - {fileID: 757030262}
-  - {fileID: 1481243589}
-  - {fileID: 872425415}
-  - {fileID: 659630008}
-  questions:
-  - image: {fileID: 21300000, guid: 9b37ef953322d5d42ad007516a1be6b5, type: 3}
-    questionEn: What is this animal ?
-    questionVi: "\u0110\xE2y l\xE0 con g\xEC ?"
-    answers:
-    - Dog
-    - Pig
-    - Cat
-    - Shibainu
-    correctIndex: 3
-  - image: {fileID: 21300000, guid: 25e8be043f4e93c469ca0a088403f58a, type: 3}
-    questionEn: What is this animal ?
-    questionVi: "\u0110\xE2y l\xE0 con g\xEC ?"
-    answers:
-    - Pig
-    - Dog
-    - Alpaca
-    - Shibainu
-    correctIndex: 2
-  - image: {fileID: 21300000, guid: d37a5df662a2626479320a307c222305, type: 3}
-    questionEn: What is this animal ?
-    questionVi: "\u0110\xE2y l\xE0 con g\xEC ?"
-    answers:
-    - Bull
-    - Deer
-    - Cat
-    - Alpaca
-    correctIndex: 1
-  - image: {fileID: 21300000, guid: 207acd1a6eaf5bb45bdfa587c66272c6, type: 3}
-    questionEn: What is this animal ?
-    questionVi: "\u0110\xE2y l\xE0 con g\xEC ?"
-    answers:
-    - Dog
-    - Cow
-    - Cat
-    - Shibainu
-    correctIndex: 1
-  - image: {fileID: 21300000, guid: 05515f5019782544891dbef76b0a1fff, type: 3}
-    questionEn: What is this animal ?
-    questionVi: "\u0110\xE2y l\xE0 con g\xEC ?"
-    answers:
-    - Deer
-    - Pig
-    - Bull
-    - Shibainu
-    correctIndex: 0
-  - image: {fileID: 21300000, guid: eb5d752fdc8ef5046bc83a0e44cb00ea, type: 3}
-    questionEn: What is this animal ?
-    questionVi: "\u0110\xE2y l\xE0 con g\xEC ?"
-    answers:
-    - Dog
-    - Shibainu
-    - Deer
-    - Donkey
-    correctIndex: 3
-  - image: {fileID: 21300000, guid: 93206e75f41f43c4a889ff53afdaf89d, type: 3}
-    questionEn: What is this animal ?
-    questionVi: "\u0110\xE2y l\xE0 con g\xEC ?"
-    answers:
-    - Fox
-    - Husky
-    - Wolf
-    - Dog
-    correctIndex: 0
-  - image: {fileID: 21300000, guid: 09594fd1554c93e48815c4e5f81455ce, type: 3}
-    questionEn: What is this animal ?
-    questionVi: "\u0110\xE2y l\xE0 con g\xEC ?"
-    answers:
-    - Dog
-    - Horse White
-    - Cat
-    - Wolf
-    correctIndex: 2
-  - image: {fileID: 21300000, guid: 7d8cee07f3f0af64fadfd4e99557a5ea, type: 3}
-    questionEn: What is this animal ?
-    questionVi: "\u0110\xE2y l\xE0 con g\xEC ?"
-    answers:
-    - Husky
-    - Pig
-    - Alpaca
-    - Shibainu
-    correctIndex: 0
-  - image: {fileID: 21300000, guid: 3cd809765f4e48f4f80c3c3f69029b99, type: 3}
-    questionEn: What is this animal ?
-    questionVi: "\u0110\xE2y l\xE0 con g\xEC ?"
-    answers:
-    - Fox
-    - Wolf
-    - Cat
-    - Deer
-    correctIndex: 1
-  audioSource: {fileID: 1749895122}
-  soundCorrect: {fileID: 8300000, guid: e0f452872db6af446a00c3117ec4f90f, type: 3}
-  soundWrong: {fileID: 8300000, guid: bc7ec946c4453324f824b8f69758ac67, type: 3}
---- !u!82 &1749895122
-AudioSource:
-=======
-=======
->>>>>>> origin/main
   m_GameObject: {fileID: 1785717605}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7461,110 +5319,10 @@ AudioSource:
         m_CallState: 2
 --- !u!114 &1785717608
 MonoBehaviour:
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_GameObject: {fileID: 1749895117}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-=======
-=======
->>>>>>> origin/main
   m_GameObject: {fileID: 1785717605}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7597,10 +5355,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785717605}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
->>>>>>> origin/main
 --- !u!1 &1897851595
 GameObject:
   m_ObjectHideFlags: 0
@@ -7931,11 +5685,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 12, y: 190}
-=======
   m_AnchoredPosition: {x: 12, y: -275}
->>>>>>> origin/main
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956082274
@@ -8032,90 +5782,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956082272}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
---- !u!1 &1987433778
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1987433781}
-  - component: {fileID: 1987433780}
-  - component: {fileID: 1987433779}
-  m_Layer: 5
-  m_Name: Image_Animal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1987433779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987433778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1987433780
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987433778}
-  m_CullTransparentMesh: 1
---- !u!224 &1987433781
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987433778}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 25390867}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.442, y: 186}
-  m_SizeDelta: {x: 550, y: 550}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2037225723
-=======
 --- !u!1 &2038488425
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
---- !u!1 &2038488425
->>>>>>> origin/main
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8287,18 +5954,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-<<<<<<< HEAD:Assets/_AR Lingo/Scenes/UnityScene/menu.unity
-  m_AnchoredPosition: {x: -376.76, y: 1052}
-  m_SizeDelta: {x: 79.844, y: 68.323}
-=======
   m_AnchoredPosition: {x: 662.41, y: -4849}
   m_SizeDelta: {x: 326.44, y: 114.92}
->>>>>>> origin/main:Assets/_AR Lingo/Scenes/UnityScene/Main Scene.unity
-=======
-  m_AnchoredPosition: {x: 662.41, y: -4849}
-  m_SizeDelta: {x: 326.44, y: 114.92}
->>>>>>> origin/main
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2063573590
 MonoBehaviour:
@@ -8321,11 +5978,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-<<<<<<< HEAD
-    m_NormalColor: {r: 1, g: 0.9803922, b: 0.9803922, a: 1}
-=======
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> origin/main
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -8373,11 +6026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-=======
   m_Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> origin/main
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8740,11 +6389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 15, y: -213}
-=======
   m_AnchoredPosition: {x: 14, y: -655}
->>>>>>> origin/main
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2117408991
