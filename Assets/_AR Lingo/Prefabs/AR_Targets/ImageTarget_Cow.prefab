@@ -53,7 +53,7 @@ MonoBehaviour:
   RuntimeCollider: 0
   mTrackableName: img_cow
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/NewAnimalDatabase.xml
+  mDataSetPath: Vuforia/Animals12.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 0.1
@@ -144,7 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARContentTrigger
   wordID: Cow
-  ar3DModel: {fileID: 7593859817806217604, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
   enableDebugLogs: 1
 --- !u!114 &13663834267160518
 MonoBehaviour:
@@ -161,7 +160,7 @@ MonoBehaviour:
   mObserverBehaviour: {fileID: 5897259266846049884}
   mHiddenRoot: {fileID: 0}
   mTargetName: img_cow
-  mDatasetName: Vuforia/NewAnimalDatabase.xml
+  mDatasetName: Vuforia/Animals12.xml
   mCastedBehaviour: {fileID: 5897259266846049884}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
