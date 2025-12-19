@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5897259266846049884}
   - component: {fileID: 7240912904198437506}
   - component: {fileID: 3856986717395183531}
+  - component: {fileID: 13663834267160518}
   m_Layer: 0
   m_Name: ImageTarget_Cow
   m_TagString: Untagged
@@ -61,7 +62,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 0}
+  mPreview: {fileID: 13663834267160518}
 --- !u!114 &7240912904198437506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +146,25 @@ MonoBehaviour:
   wordID: Cow
   ar3DModel: {fileID: 7593859817806217604, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
   enableDebugLogs: 1
+--- !u!114 &13663834267160518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265353599147978029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 5897259266846049884}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: img_cow
+  mDatasetName: Vuforia/NewAnimalDatabase.xml
+  mCastedBehaviour: {fileID: 5897259266846049884}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &1912615039965073836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,10 +173,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4055210947261273926}
     m_Modifications:
+    - target: {fileID: 197780946952201867, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
+      propertyPath: m_Size.x
+      value: 0.09381102
+      objectReference: {fileID: 0}
+    - target: {fileID: 197780946952201867, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
+      propertyPath: m_Size.y
+      value: 0.10894489
+      objectReference: {fileID: 0}
+    - target: {fileID: 197780946952201867, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
+      propertyPath: m_Size.z
+      value: 0.16954033
+      objectReference: {fileID: 0}
+    - target: {fileID: 197780946952201867, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
+      propertyPath: m_Center.x
+      value: -3.4876387
+      objectReference: {fileID: 0}
+    - target: {fileID: 197780946952201867, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
+      propertyPath: m_Center.y
+      value: -6.735517
+      objectReference: {fileID: 0}
+    - target: {fileID: 197780946952201867, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
+      propertyPath: m_Center.z
+      value: 0.018340155
+      objectReference: {fileID: 0}
     - target: {fileID: 4697022637564780926, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5880894613537141746, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e5ebf7046df13bc4e8273ddabbe3c0d5, type: 2}
+    - target: {fileID: 5880894613537141746, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 062b039434f00e641a0aada1528f7a97, type: 2}
     - target: {fileID: 6032452225565546672, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0574
@@ -203,7 +255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7593859817806217604, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
