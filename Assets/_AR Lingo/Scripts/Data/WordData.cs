@@ -1,4 +1,3 @@
-using UnityEngine;
 
 // Menu giúp click chuột phải tạo file nhanh: Create -> AR Lingo -> Word Data
 [CreateAssetMenu(fileName = "NewWordData", menuName = "AR Lingo/Word Data")]
