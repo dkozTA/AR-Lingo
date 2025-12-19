@@ -2,21 +2,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/// <summary>
+/// Dictionary UI - Displays word information in detail view
+/// </summary>
 public class DictionaryUI : MonoBehaviour
 {
     [Header("UI References")]
     [SerializeField] private TextMeshProUGUI englishNameText;
     [SerializeField] private TextMeshProUGUI vietnameseNameText;
-    [SerializeField] private TextMeshProUGUI pronunciationText;  // NEW: Phiên âm
+    [SerializeField] private TextMeshProUGUI pronunciationText;
     [SerializeField] private TextMeshProUGUI descriptionText;
-    [SerializeField] private TextMeshProUGUI vietnameseDescriptionText; // NEW: Mô tả tiếng Việt
+    [SerializeField] private TextMeshProUGUI vietnameseDescriptionText;
     [SerializeField] private Image iconImage;
     [SerializeField] private Button playPronunciationButton;
     [SerializeField] private Button backButton;
     [SerializeField] private Button homeButton;
 
-    [Header("Audio")]
-    [SerializeField] private AudioSource audioSource;
+    // REMOVED: No longer need local audioSource
+    // [Header("Audio")]
+    // [SerializeField] private AudioSource audioSource;
 
     [Header("Navigation")]
     [SerializeField] private GameObject homePanel;
@@ -30,11 +34,12 @@ public class DictionaryUI : MonoBehaviour
 
     void Awake()
     {
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-            audioSource.playOnAwake = false;
-        }
+        // REMOVED: No longer create local AudioSource
+        // if (audioSource == null)
+        // {
+        //     audioSource = gameObject.AddComponent<AudioSource>();
+        //     audioSource.playOnAwake = false;
+        // }
     }
 
     void OnEnable()
@@ -78,7 +83,6 @@ public class DictionaryUI : MonoBehaviour
         if (vietnameseNameText != null)
             vietnameseNameText.text = wordData.vietnameseName;
 
-        // NEW: Display pronunciation
         if (pronunciationText != null)
         {
             if (!string.IsNullOrEmpty(wordData.pronunciation))
@@ -92,11 +96,9 @@ public class DictionaryUI : MonoBehaviour
             }
         }
 
-        // Display English description
         if (descriptionText != null)
             descriptionText.text = wordData.description;
 
-        // NEW: Display Vietnamese description
         if (vietnameseDescriptionText != null)
         {
             if (!string.IsNullOrEmpty(wordData.vietnameseDescription))
@@ -126,6 +128,7 @@ public class DictionaryUI : MonoBehaviour
         }
     }
 
+    // FIXED: Use AudioManager instead of local AudioSource
     public void PlayPronunciation()
     {
         if (currentWordData == null)
@@ -134,10 +137,18 @@ public class DictionaryUI : MonoBehaviour
             return;
         }
 
-        if (currentWordData.audioPronounce != null && audioSource != null)
+        if (currentWordData.audioPronounce != null)
         {
-            audioSource.PlayOneShot(currentWordData.audioPronounce);
-            Debug.Log($"Playing pronunciation for: {currentWordData.englishName}");
+            // Use AudioManager's Voice channel so it respects volume settings
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayVoice(currentWordData.audioPronounce);
+                Debug.Log($"Playing pronunciation for: {currentWordData.englishName}");
+            }
+            else
+            {
+                Debug.LogError("DictionaryUI: AudioManager not found!");
+            }
         }
         else
         {
@@ -158,6 +169,11 @@ public class DictionaryUI : MonoBehaviour
             }
             
             scanPanel.SetActive(true);
+            
+            if (arScanFeature != null)
+            {
+                arScanFeature.OnBackFromDictionary();
+            }
         }
         else
         {
@@ -177,22 +193,11 @@ public class DictionaryUI : MonoBehaviour
     {
         if (menuController != null)
         {
-            if (arScanFeature != null && cameFromARView) 
-                arScanFeature.OnResetClicked();
             menuController.BackToHome();
         }
         else
         {
-            if (homePanel != null)
-                homePanel.SetActive(true);
-            
-            gameObject.SetActive(false);
-            
-            if (scanPanel != null)
-                scanPanel.SetActive(false);
-                
-            if (arScanFeature != null && cameFromARView) 
-                arScanFeature.OnResetClicked();
+            Debug.LogWarning("DictionaryUI: menuController reference is not assigned!");
         }
     }
 

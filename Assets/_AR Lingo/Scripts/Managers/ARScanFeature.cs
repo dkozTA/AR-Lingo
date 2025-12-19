@@ -8,15 +8,13 @@ using UnityEngine.UI;
 public class ARScanFeature : MonoBehaviour
 {
     [Header("1. UI Elements")]
-    public GameObject viewInfoButton;   // Button to view dictionary
-    public GameObject quizButton;       // Button to start quiz
-    public GameObject resetButton;      // Button to reset scan
-    public GameObject scanInstruction;  // Scan instruction panel
-    public GameObject scanFrame;        // AR scan frame overlay
-    
-    // NEW: Animation buttons (just for show, no functionality yet)
-    public GameObject walkButton;       // NEW: Walk button
-    public GameObject attackButton;     // NEW: Attack button
+    public GameObject viewInfoButton;
+    public GameObject quizButton;
+    public GameObject resetButton;
+    public GameObject scanInstruction;
+    public GameObject scanFrame;
+    public GameObject walkButton;
+    public GameObject attackButton;
 
     [Header("2. Panel References")]
     public GameObject dictionaryPanel;
@@ -40,6 +38,7 @@ public class ARScanFeature : MonoBehaviour
 
     private WordData currentDetectedWord;
     private bool hasDetectedObject = false;
+    private bool isViewingDictionary = false; // NEW: Track if user is viewing dictionary
 
     void Start()
     {
@@ -113,14 +112,32 @@ public class ARScanFeature : MonoBehaviour
     private void HandleARObjectLost()
     {
         if (enableDebugLogs)
-            Debug.Log("[ARScanFeature] AR Target lost - Returning to scan state");
+            Debug.Log("[ARScanFeature] AR Target lost");
         
+        // NEW: Don't reset if user is viewing dictionary detail
+        if (isViewingDictionary)
+        {
+            if (enableDebugLogs)
+                Debug.Log("[ARScanFeature] User is viewing dictionary - keeping UI as is");
+            
+            // Just hide the buttons, keep dictionary open
+            if (viewInfoButton != null) viewInfoButton.SetActive(false);
+            if (quizButton != null) quizButton.SetActive(false);
+            if (walkButton != null) walkButton.SetActive(false);
+            if (attackButton != null) attackButton.SetActive(false);
+            
+            hasDetectedObject = false;
+            return;
+        }
+        
+        // Normal reset for scan panel
         ResetScanState();
     }
 
     private void ShowDetectedObject()
     {
         hasDetectedObject = true;
+        isViewingDictionary = false; // Reset dictionary flag
 
         if (scanInstruction != null) scanInstruction.SetActive(false);
         if (scanFrame != null) scanFrame.SetActive(false);
@@ -144,7 +161,7 @@ public class ARScanFeature : MonoBehaviour
 
     void Update()
     {
-        if (!hasDetectedObject) return;
+        if (!hasDetectedObject || isViewingDictionary) return; // Don't detect clicks when viewing dictionary
 
         bool inputDetected = false;
         Vector3 inputPosition = Vector3.zero;
@@ -208,27 +225,21 @@ public class ARScanFeature : MonoBehaviour
         if (enableDebugLogs)
             Debug.Log("[ARScanFeature] Showing action buttons");
         
-        // Show all 3 buttons
         if (viewInfoButton != null) viewInfoButton.SetActive(true);
-        if (walkButton != null) walkButton.SetActive(true);    // NEW: Show walk button
-        if (attackButton != null) attackButton.SetActive(true); // NEW: Show attack button
+        if (walkButton != null) walkButton.SetActive(true);
+        if (attackButton != null) attackButton.SetActive(true);
         
-        // Quiz button can stay hidden or show if you want
         if (quizButton != null) quizButton.SetActive(false);
     }
 
-    // NEW: Placeholder function for Walk button (does nothing for now)
     public void OnWalkButtonClicked()
     {
         Debug.Log("[ARScanFeature] Walk button clicked - Animation will be added later");
-        // TODO: Add walk animation later
     }
 
-    // NEW: Placeholder function for Attack button (does nothing for now)
     public void OnAttackButtonClicked()
     {
         Debug.Log("[ARScanFeature] Attack button clicked - Animation will be added later");
-        // TODO: Add attack animation later
     }
 
     public void OnOpenDictionaryClicked()
@@ -241,6 +252,9 @@ public class ARScanFeature : MonoBehaviour
 
         if (enableDebugLogs)
             Debug.Log($"[ARScanFeature] Opening dictionary for: {currentDetectedWord.englishName}");
+
+        // NEW: Set flag that we're viewing dictionary
+        isViewingDictionary = true;
 
         if (scanPanel != null) scanPanel.SetActive(false);
         if (dictionaryPanel != null) dictionaryPanel.SetActive(true);
@@ -271,6 +285,27 @@ public class ARScanFeature : MonoBehaviour
         if (enableDebugLogs)
             Debug.Log("[ARScanFeature] Resetting scan state");
         
+        // NEW: Reset dictionary flag
+        isViewingDictionary = false;
+        
+        ResetScanState();
+    }
+
+    // NEW: Call this when user clicks Back button in dictionary
+    public void OnBackFromDictionary()
+    {
+        if (enableDebugLogs)
+            Debug.Log("[ARScanFeature] Back from dictionary to scan panel");
+        
+        // Reset dictionary flag
+        isViewingDictionary = false;
+        
+        // Hide dictionary, show scan panel
+        if (dictionaryPanel != null) dictionaryPanel.SetActive(false);
+        if (dictionaryDetailViewPanel != null) dictionaryDetailViewPanel.SetActive(false);
+        if (scanPanel != null) scanPanel.SetActive(true);
+        
+        // Reset to clean scan state
         ResetScanState();
     }
 
@@ -278,6 +313,7 @@ public class ARScanFeature : MonoBehaviour
     {
         hasDetectedObject = false;
         currentDetectedWord = null;
+        isViewingDictionary = false; // Make sure flag is reset
 
         if (scanInstruction != null) scanInstruction.SetActive(true);
         if (scanFrame != null) scanFrame.SetActive(true);
@@ -285,12 +321,14 @@ public class ARScanFeature : MonoBehaviour
         if (viewInfoButton != null) viewInfoButton.SetActive(false);
         if (quizButton != null) quizButton.SetActive(false);
         if (resetButton != null) resetButton.SetActive(false);
-        
-        // NEW: Hide animation buttons when resetting
         if (walkButton != null) walkButton.SetActive(false);
         if (attackButton != null) attackButton.SetActive(false);
 
-        if (dictionaryPanel != null) dictionaryPanel.SetActive(false);
-        if (dictionaryDetailViewPanel != null) dictionaryDetailViewPanel.SetActive(false);
+        // Only hide dictionary panels if not currently viewing
+        if (!isViewingDictionary)
+        {
+            if (dictionaryPanel != null) dictionaryPanel.SetActive(false);
+            if (dictionaryDetailViewPanel != null) dictionaryDetailViewPanel.SetActive(false);
+        }
     }
 }
