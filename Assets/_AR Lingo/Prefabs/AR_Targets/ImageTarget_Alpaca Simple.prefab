@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &79854855119142767
+--- !u!1 &4742476345535434282
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2646130612834873638}
-  - component: {fileID: 1951348803625000303}
-  - component: {fileID: 1415938349031405886}
-  - component: {fileID: 1359733448426279308}
+  - component: {fileID: 7837984783604410184}
+  - component: {fileID: 6445976704043435250}
+  - component: {fileID: 2775621463859289276}
+  - component: {fileID: 319034192461426627}
+  - component: {fileID: 7003214236610946840}
   m_Layer: 0
-  m_Name: ImageTarget_Deer
+  m_Name: ImageTarget_Alpaca Simple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2646130612834873638
+--- !u!4 &7837984783604410184
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 79854855119142767}
+  m_GameObject: {fileID: 4742476345535434282}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 397825428926827784}
+  - {fileID: 3325976916857886922}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1951348803625000303
+--- !u!114 &6445976704043435250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 79854855119142767}
+  m_GameObject: {fileID: 4742476345535434282}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
@@ -50,7 +51,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: img_deer
+  mTrackableName: img_alpaca
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/NewAnimalDatabase.xml
   mAspectRatio: 1
@@ -61,20 +62,20 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 0}
---- !u!114 &1415938349031405886
+  mPreview: {fileID: 7003214236610946840}
+--- !u!114 &2775621463859289276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 79854855119142767}
+  m_GameObject: {fileID: 4742476345535434282}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: VuforiaScripts::DefaultObserverEventHandler
-  StatusFilter: 0
+  StatusFilter: 1
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -103,8 +104,8 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1359733448426279308}
-        m_TargetAssemblyTypeName: ARContentTrigger, Assembly-CSharp
+      - m_Target: {fileID: 319034192461426627}
+        m_TargetAssemblyTypeName: SimpleARTrigger, Assembly-CSharp
         m_MethodName: OnTargetFound
         m_Mode: 1
         m_Arguments:
@@ -118,8 +119,8 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1359733448426279308}
-        m_TargetAssemblyTypeName: ARContentTrigger, Assembly-CSharp
+      - m_Target: {fileID: 319034192461426627}
+        m_TargetAssemblyTypeName: SimpleARTrigger, Assembly-CSharp
         m_MethodName: OnTargetLost
         m_Mode: 1
         m_Arguments:
@@ -130,92 +131,107 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1359733448426279308
+--- !u!114 &319034192461426627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 79854855119142767}
+  m_GameObject: {fileID: 4742476345535434282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c98616250f006b74a96fca650270d91e, type: 3}
+  m_Script: {fileID: 11500000, guid: b33d10f83b6fff2448657c450853be1c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ARContentTrigger
-  wordID: Deer
-  ar3DModel: {fileID: 8604027563084526486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
-  enableDebugLogs: 1
---- !u!1001 &8543633518882918070
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleARTrigger
+  linkedModel: {fileID: 636950682223248335}
+  namePronunciation: {fileID: 0}
+--- !u!114 &7003214236610946840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4742476345535434282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 6445976704043435250}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: img_alpaca
+  mDatasetName: Vuforia/NewAnimalDatabase.xml
+  mCastedBehaviour: {fileID: 6445976704043435250}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!1001 &269594375853166615
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2646130612834873638}
+    m_TransformParent: {fileID: 7837984783604410184}
     m_Modifications:
-    - target: {fileID: 8292333584881943486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 8292333584881943486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8292333584881943486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8292333584881943486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6761407
-      objectReference: {fileID: 0}
-    - target: {fileID: 8292333584881943486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8292333584881943486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7367726
-      objectReference: {fileID: 0}
-    - target: {fileID: 8292333584881943486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8292333584881943486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8292333584881943486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 94.914
-      objectReference: {fileID: 0}
-    - target: {fileID: 8292333584881943486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8604027563084526486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
+    - target: {fileID: 822801854457435096, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
       propertyPath: m_Name
-      value: PF_Deer
+      value: PF_Alpaca
       objectReference: {fileID: 0}
-    - target: {fileID: 8604027563084526486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
+    - target: {fileID: 822801854457435096, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8803061588076693231, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
+    - target: {fileID: 3284800653173278941, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.81
+      value: -0.001
       objectReference: {fileID: 0}
-    - target: {fileID: 8803061588076693231, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
+    - target: {fileID: 3284800653173278941, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0012
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284800653173278941, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.32
+      value: -0.0015
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284800653173278941, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.37717798
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284800653173278941, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284800653173278941, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.92614084
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284800653173278941, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284800653173278941, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284800653173278941, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 135.682
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284800653173278941, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
---- !u!4 &397825428926827784 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
+--- !u!1 &636950682223248335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 822801854457435096, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
+  m_PrefabInstance: {fileID: 269594375853166615}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3325976916857886922 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8292333584881943486, guid: 0a4deb52c5a55af44a22da713bb55d3c, type: 3}
-  m_PrefabInstance: {fileID: 8543633518882918070}
+  m_CorrespondingSourceObject: {fileID: 3284800653173278941, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
+  m_PrefabInstance: {fileID: 269594375853166615}
   m_PrefabAsset: {fileID: 0}

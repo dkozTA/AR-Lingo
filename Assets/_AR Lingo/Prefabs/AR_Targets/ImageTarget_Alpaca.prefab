@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6905447833588725510}
   - component: {fileID: 5105872030486226030}
   - component: {fileID: 3618699759688373956}
-  - component: {fileID: 2763201504060560657}
+  - component: {fileID: 6232262892624170776}
   m_Layer: 0
   m_Name: ImageTarget_Alpaca
   m_TagString: Untagged
@@ -103,7 +103,7 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2763201504060560657}
+      - m_Target: {fileID: 6232262892624170776}
         m_TargetAssemblyTypeName: ARContentTrigger, Assembly-CSharp
         m_MethodName: OnTargetFound
         m_Mode: 1
@@ -118,7 +118,7 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2763201504060560657}
+      - m_Target: {fileID: 6232262892624170776}
         m_TargetAssemblyTypeName: ARContentTrigger, Assembly-CSharp
         m_MethodName: OnTargetLost
         m_Mode: 1
@@ -130,7 +130,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2763201504060560657
+--- !u!114 &6232262892624170776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

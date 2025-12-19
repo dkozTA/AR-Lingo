@@ -137,7 +137,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 175340756505061907}
-  - component: {fileID: 4820119216471714545}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -162,28 +161,6 @@ Transform:
   - {fileID: 4980148377371782848}
   m_Father: {fileID: 3284800653173278941}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &4820119216471714545
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377934500734126262}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 8e2031e6f6b39ce439f29bf9e262dd62, type: 3}
-  m_Controller: {fileID: 9100000, guid: 7ff56d8142d0023488c0d964f72c4539, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &428312002479646499
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,15 +397,15 @@ GameObject:
   m_Component:
   - component: {fileID: 3284800653173278941}
   - component: {fileID: 579559446267820532}
-  - component: {fileID: 7724363555131741601}
   - component: {fileID: 852084261240021705}
+  - component: {fileID: 3846230692778653853}
   m_Layer: 0
   m_Name: PF_Alpaca
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3284800653173278941
 Transform:
   m_ObjectHideFlags: 0
@@ -464,105 +441,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.053296484, y: 0.12506476, z: 0.113074675}
-  m_Center: {x: -0.0020372374, y: 0.050314426, z: 0.0026595294}
---- !u!82 &7724363555131741601
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822801854457435096}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 4f65fe3830226494d96ce273ac71a786, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  m_Size: {x: 0.035404872, y: 0.12506476, z: 0.1082084}
+  m_Center: {x: -0.0014323221, y: 0.050314426, z: -0.000110516325}
 --- !u!114 &852084261240021705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,6 +457,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnimalInteraction
   sfxAnimal: {fileID: 8300000, guid: 4f65fe3830226494d96ce273ac71a786, type: 3}
   sfxName: {fileID: 8300000, guid: bac5acd47b7c8ff42a45e953ae4d05aa, type: 3}
+  actionTriggerName: DoAction
+--- !u!95 &3846230692778653853
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822801854457435096}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 8e2031e6f6b39ce439f29bf9e262dd62, type: 3}
+  m_Controller: {fileID: 22100000, guid: fae8e8cb0f9c70f489803f041a5e6791, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &908716749172996958
 GameObject:
   m_ObjectHideFlags: 0

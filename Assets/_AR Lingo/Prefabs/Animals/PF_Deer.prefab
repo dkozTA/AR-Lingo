@@ -2159,8 +2159,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8292333584881943486}
   - component: {fileID: 4568950222720657021}
-  - component: {fileID: 8987598673165439621}
   - component: {fileID: 556829784168454201}
+  - component: {fileID: 4757701990503702729}
   m_Layer: 0
   m_Name: PF_Deer
   m_TagString: Untagged
@@ -2205,103 +2205,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.105510965, y: 0.11752862, z: 0.123413995}
   m_Center: {x: -0.011147015, y: 0.04460235, z: 0.0023243874}
---- !u!82 &8987598673165439621
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8604027563084526486}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b18a16ef6f39f5a4299d4baaacabb5a9, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &556829784168454201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2316,6 +2219,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnimalInteraction
   sfxAnimal: {fileID: 8300000, guid: b18a16ef6f39f5a4299d4baaacabb5a9, type: 3}
   sfxName: {fileID: 8300000, guid: f3082e5788770b34ebf44ec53dae2944, type: 3}
+  actionTriggerName: DoAction
+--- !u!95 &4757701990503702729
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8604027563084526486}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 299e5ddc5c40bdf41bf9019fc665d1f8, type: 3}
+  m_Controller: {fileID: 22100000, guid: a6744fe58c0ea1047a06ffe848c1baff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8699139777888904355
 GameObject:
   m_ObjectHideFlags: 0
