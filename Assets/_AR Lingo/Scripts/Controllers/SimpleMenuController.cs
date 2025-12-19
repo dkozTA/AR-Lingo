@@ -36,12 +36,20 @@ public class SimpleMenuController : MonoBehaviour
         settingPanel.SetActive(true);
     }
 
+    /// <summary>
+    /// Quit the application
+    /// </summary>
     public void QuitApp()
     {
-        // Khi chạy thử trong Unity thì nó hiện dòng này
-        Debug.Log("Đã thoát ứng dụng!"); 
-        // Khi build ra điện thoại thật thì lệnh này mới chạy
-        Application.Quit(); 
+        Debug.Log("[SimpleMenuController] Quitting application...");
+
+        #if UNITY_EDITOR
+        // Stop playing in Unity Editor
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
+        // Quit application on device
+        Application.Quit();
+        #endif
     }
 
     // --- HÀM CHO NÚT BACK ---
