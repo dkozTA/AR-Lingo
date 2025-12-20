@@ -19,7 +19,7 @@ public class ARContentTrigger : MonoBehaviour
     {
         if (enableDebugLogs)
             Debug.Log($"[ARContentTrigger] Initialized for target: {wordID}");
-        
+
         if (ar3DModel != null)
         {
             // DEBUG: Log model info at start
@@ -27,7 +27,7 @@ public class ARContentTrigger : MonoBehaviour
             Debug.Log($"[ARContentTrigger] Model Position: {ar3DModel.transform.localPosition}");
             Debug.Log($"[ARContentTrigger] Model Scale: {ar3DModel.transform.localScale}");
             Debug.Log($"[ARContentTrigger] Model Active Self: {ar3DModel.activeSelf}");
-            
+
             // Check for renderer
             Renderer[] renderers = ar3DModel.GetComponentsInChildren<Renderer>();
             Debug.Log($"[ARContentTrigger] Found {renderers.Length} renderers in model");
@@ -36,7 +36,7 @@ public class ARContentTrigger : MonoBehaviour
                 string matName = r.sharedMaterial != null ? r.sharedMaterial.name : "None";
                 Debug.Log($"[ARContentTrigger] Renderer: {r.name}, Enabled: {r.enabled}, Material: {matName}");
             }
-            
+
             // Make sure model starts hidden
             ar3DModel.SetActive(false);
             if (enableDebugLogs)
@@ -61,12 +61,12 @@ public class ARContentTrigger : MonoBehaviour
         if (ar3DModel != null)
         {
             ar3DModel.SetActive(true);
-            
+
             // DEBUG: Check after activation
             Debug.Log($"[ARContentTrigger] ✓ Model activated - Active: {ar3DModel.activeSelf}, ActiveInHierarchy: {ar3DModel.activeInHierarchy}");
             Debug.Log($"[ARContentTrigger] ✓ Model World Position: {ar3DModel.transform.position}");
             Debug.Log($"[ARContentTrigger] ✓ ImageTarget Position: {transform.position}");
-            
+
             if (enableDebugLogs)
                 Debug.Log($"[ARContentTrigger] ✓ 3D Model '{ar3DModel.name}' activated");
         }
@@ -76,9 +76,9 @@ public class ARContentTrigger : MonoBehaviour
         }
 
         // Notify GameManager
-        if (GameManager.Instance != null)
+        if (AppStateManager.Instance != null)
         {
-            GameManager.Instance.OnARObjectDetected(wordID);
+            AppStateManager.Instance.OnARObjectDetected(wordID);
             if (enableDebugLogs)
                 Debug.Log($"[ARContentTrigger] ✓ Notified GameManager about {wordID}");
         }
@@ -106,9 +106,9 @@ public class ARContentTrigger : MonoBehaviour
         }
 
         // Notify GameManager
-        if (GameManager.Instance != null)
+        if (AppStateManager.Instance != null)
         {
-            GameManager.Instance.NotifyARObjectLost();
+            AppStateManager.Instance.NotifyARObjectLost();
         }
     }
 }

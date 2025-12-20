@@ -10,9 +10,9 @@ public enum AppState
     Dictionary
 }
 
-public class GameManager : MonoBehaviour
+public class AppStateManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static AppStateManager Instance { get; private set; }
 
     [Header("Debug Info")]
     [SerializeField] private AppState _currentState;

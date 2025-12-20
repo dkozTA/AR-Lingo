@@ -24,10 +24,10 @@ public class ARScanFeature : MonoBehaviour
     public GameObject dictionaryDetailViewPanel;
     public GameObject dictionaryListViewBackButton;
     public GameObject dictionaryHeader;
-    
+
     [Header("3. Data")]
     public WordDatabase wordDatabase;
-    public GameManager gameManager;
+    public AppStateManager gameManager;
 
     [Header("4. AR Detection Settings")]
     public Camera arCamera;
@@ -54,14 +54,14 @@ public class ARScanFeature : MonoBehaviour
     {
         if (gameManager == null)
         {
-            gameManager = GameManager.Instance;
+            gameManager = AppStateManager.Instance;
         }
 
         if (gameManager != null)
         {
             gameManager.OnAnimalDetected += HandleAnimalDetected;
             gameManager.OnARObjectLost += HandleARObjectLost;
-            
+
             if (enableDebugLogs)
                 Debug.Log("[ARScanFeature] Subscribed to GameManager events");
         }
@@ -90,12 +90,12 @@ public class ARScanFeature : MonoBehaviour
         if (wordDatabase != null)
         {
             currentDetectedWord = wordDatabase.GetWordByID(wordID);
-            
+
             if (currentDetectedWord != null)
             {
                 if (enableDebugLogs)
                     Debug.Log($"[ARScanFeature] Word found: {currentDetectedWord.englishName} ({currentDetectedWord.vietnameseName})");
-                
+
                 ShowDetectedObject();
             }
             else
@@ -113,23 +113,23 @@ public class ARScanFeature : MonoBehaviour
     {
         if (enableDebugLogs)
             Debug.Log("[ARScanFeature] AR Target lost");
-        
+
         // NEW: Don't reset if user is viewing dictionary detail
         if (isViewingDictionary)
         {
             if (enableDebugLogs)
                 Debug.Log("[ARScanFeature] User is viewing dictionary - keeping UI as is");
-            
+
             // Just hide the buttons, keep dictionary open
             if (viewInfoButton != null) viewInfoButton.SetActive(false);
             if (quizButton != null) quizButton.SetActive(false);
             if (walkButton != null) walkButton.SetActive(false);
             if (attackButton != null) attackButton.SetActive(false);
-            
+
             hasDetectedObject = false;
             return;
         }
-        
+
         // Normal reset for scan panel
         ResetScanState();
     }
@@ -153,7 +153,7 @@ public class ARScanFeature : MonoBehaviour
             if (quizButton != null) quizButton.SetActive(false);
             if (walkButton != null) walkButton.SetActive(false);
             if (attackButton != null) attackButton.SetActive(false);
-            
+
             if (enableDebugLogs)
                 Debug.Log("[ARScanFeature] Waiting for tap on model to show buttons...");
         }
@@ -170,7 +170,7 @@ public class ARScanFeature : MonoBehaviour
         {
             inputDetected = true;
             inputPosition = Input.GetTouch(0).position;
-            
+
             if (enableDebugLogs)
                 Debug.Log($"[ARScanFeature] Touch detected at: {inputPosition}");
         }
@@ -178,7 +178,7 @@ public class ARScanFeature : MonoBehaviour
         {
             inputDetected = true;
             inputPosition = Input.mousePosition;
-            
+
             if (enableDebugLogs)
                 Debug.Log($"[ARScanFeature] Mouse click detected at: {inputPosition}");
         }
@@ -189,16 +189,16 @@ public class ARScanFeature : MonoBehaviour
             {
                 Ray ray = arCamera.ScreenPointToRay(inputPosition);
                 RaycastHit hit;
-                
+
                 if (enableDebugLogs)
                     Debug.Log($"[ARScanFeature] Raycasting from {ray.origin} in direction {ray.direction}");
-                
+
                 if (Physics.Raycast(ray, out hit, 100f))
                 {
                     if (enableDebugLogs)
                         Debug.Log($"[ARScanFeature] ✓ Hit object: {hit.collider.gameObject.name}");
-                    
-                    if (hit.collider.gameObject.name.StartsWith("PF_") || 
+
+                    if (hit.collider.gameObject.name.StartsWith("PF_") ||
                         hit.collider.transform.root.name.StartsWith("ImageTarget"))
                     {
                         ShowActionButtons();
@@ -208,7 +208,7 @@ public class ARScanFeature : MonoBehaviour
                 {
                     if (enableDebugLogs)
                         Debug.Log("[ARScanFeature] Raycast hit nothing - showing buttons anyway (fallback)");
-                    
+
                     ShowActionButtons();
                 }
             }
@@ -224,11 +224,11 @@ public class ARScanFeature : MonoBehaviour
     {
         if (enableDebugLogs)
             Debug.Log("[ARScanFeature] Showing action buttons");
-        
+
         if (viewInfoButton != null) viewInfoButton.SetActive(true);
         if (walkButton != null) walkButton.SetActive(true);
         if (attackButton != null) attackButton.SetActive(true);
-        
+
         if (quizButton != null) quizButton.SetActive(false);
     }
 
@@ -259,9 +259,9 @@ public class ARScanFeature : MonoBehaviour
         if (scanPanel != null) scanPanel.SetActive(false);
         if (dictionaryPanel != null) dictionaryPanel.SetActive(true);
 
-        if (dictionaryDetailViewPanel != null) 
+        if (dictionaryDetailViewPanel != null)
             dictionaryDetailViewPanel.SetActive(true);
-        if (dictionaryListViewPanel != null) 
+        if (dictionaryListViewPanel != null)
             dictionaryListViewPanel.SetActive(false);
 
         if (dictionaryListViewBackButton != null)
@@ -284,10 +284,10 @@ public class ARScanFeature : MonoBehaviour
     {
         if (enableDebugLogs)
             Debug.Log("[ARScanFeature] Resetting scan state");
-        
+
         // NEW: Reset dictionary flag
         isViewingDictionary = false;
-        
+
         ResetScanState();
     }
 
@@ -296,15 +296,15 @@ public class ARScanFeature : MonoBehaviour
     {
         if (enableDebugLogs)
             Debug.Log("[ARScanFeature] Back from dictionary to scan panel");
-        
+
         // Reset dictionary flag
         isViewingDictionary = false;
-        
+
         // Hide dictionary, show scan panel
         if (dictionaryPanel != null) dictionaryPanel.SetActive(false);
         if (dictionaryDetailViewPanel != null) dictionaryDetailViewPanel.SetActive(false);
         if (scanPanel != null) scanPanel.SetActive(true);
-        
+
         // Reset to clean scan state
         ResetScanState();
     }

@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 47205273}
   - component: {fileID: 47205272}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: _AppStateManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -695,6 +695,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1835886290637205011, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
       insertIndex: -1
       addedObject: {fileID: 432097894}
+    - targetCorrespondingSourceObject: {fileID: 1835886290637205011, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 432097895}
   m_SourcePrefab: {fileID: 100100000, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
 --- !u!1 &149769763
 GameObject:
@@ -2035,6 +2038,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetBehaviour
 --- !u!114 &432097894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432097889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 432097893}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: img_bull
+  mDatasetName: Vuforia/Animals12.xml
+  mCastedBehaviour: {fileID: 432097893}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &432097895
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8067,6 +8089,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 79854855119142767, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2093917606}
+    - targetCorrespondingSourceObject: {fileID: 79854855119142767, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2093917607}
   m_SourcePrefab: {fileID: 100100000, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
 --- !u!1 &1289359256 stripped
 GameObject:
@@ -8625,6 +8650,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8265353599147978029, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1796520242}
+    - targetCorrespondingSourceObject: {fileID: 8265353599147978029, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1796520243}
   m_SourcePrefab: {fileID: 100100000, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
 --- !u!1 &1394841835
 GameObject:
@@ -10885,7 +10913,26 @@ MonoBehaviour:
   mObserverBehaviour: {fileID: 1796520236}
   mHiddenRoot: {fileID: 0}
   mTargetName: img_cow
-  mDatasetName: Vuforia/NewAnimalDatabase.xml
+  mDatasetName: Vuforia/Animals12.xml
+  mCastedBehaviour: {fileID: 1796520236}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &1796520243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796520232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 1796520236}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: img_cow
+  mDatasetName: Vuforia/Animals12.xml
   mCastedBehaviour: {fileID: 1796520236}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -12429,7 +12476,7 @@ GameObject:
   - component: {fileID: 2083726079}
   - component: {fileID: 2083726078}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: _AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12681,6 +12728,25 @@ Transform:
   m_PrefabInstance: {fileID: 1280200321}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &2093917606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093917596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 2093917600}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: img_deer
+  mDatasetName: Vuforia/Animals12.xml
+  mCastedBehaviour: {fileID: 2093917600}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &2093917607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
