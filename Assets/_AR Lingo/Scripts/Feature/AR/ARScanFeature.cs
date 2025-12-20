@@ -161,63 +161,64 @@ public class ARScanFeature : MonoBehaviour
 
     void Update()
     {
-        if (!hasDetectedObject || isViewingDictionary) return; // Don't detect clicks when viewing dictionary
+        if (!hasDetectedObject || isViewingDictionary) return;
 
-        bool inputDetected = false;
-        Vector3 inputPosition = Vector3.zero;
+        if (!TryGetInputPosition(out var inputPosition)) return;
 
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (arCamera == null)
         {
-            inputDetected = true;
-            inputPosition = Input.GetTouch(0).position;
-
-            if (enableDebugLogs)
-                Debug.Log($"[ARScanFeature] Touch detected at: {inputPosition}");
-        }
-        else if (Input.GetMouseButtonDown(0))
-        {
-            inputDetected = true;
-            inputPosition = Input.mousePosition;
-
-            if (enableDebugLogs)
-                Debug.Log($"[ARScanFeature] Mouse click detected at: {inputPosition}");
+            Debug.LogWarning("[ARScanFeature] AR Camera not assigned!");
+            ShowActionButtons();
+            return;
         }
 
-        if (inputDetected)
+        var ray = arCamera.ScreenPointToRay(inputPosition);
+        LogDebug($"[ARScanFeature] Raycasting from {ray.origin} in direction {ray.direction}");
+
+        if (Physics.Raycast(ray, out var hit, 100f))
         {
-            if (arCamera != null)
+            LogDebug($"[ARScanFeature] ✓ Hit object: {hit.collider.gameObject.name}");
+            if (IsARTarget(hit.collider.transform))
             {
-                Ray ray = arCamera.ScreenPointToRay(inputPosition);
-                RaycastHit hit;
-
-                if (enableDebugLogs)
-                    Debug.Log($"[ARScanFeature] Raycasting from {ray.origin} in direction {ray.direction}");
-
-                if (Physics.Raycast(ray, out hit, 100f))
-                {
-                    if (enableDebugLogs)
-                        Debug.Log($"[ARScanFeature] ✓ Hit object: {hit.collider.gameObject.name}");
-
-                    if (hit.collider.gameObject.name.StartsWith("PF_") ||
-                        hit.collider.transform.root.name.StartsWith("ImageTarget"))
-                    {
-                        ShowActionButtons();
-                    }
-                }
-                else
-                {
-                    if (enableDebugLogs)
-                        Debug.Log("[ARScanFeature] Raycast hit nothing - showing buttons anyway (fallback)");
-
-                    ShowActionButtons();
-                }
-            }
-            else
-            {
-                Debug.LogWarning("[ARScanFeature] AR Camera not assigned!");
                 ShowActionButtons();
             }
         }
+        else
+        {
+            LogDebug("[ARScanFeature] Raycast hit nothing - showing buttons anyway (fallback)");
+            ShowActionButtons();
+        }
+    }
+
+    private bool TryGetInputPosition(out Vector3 inputPosition)
+    {
+        inputPosition = Vector3.zero;
+
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            inputPosition = Input.GetTouch(0).position;
+            LogDebug($"[ARScanFeature] Touch detected at: {inputPosition}");
+            return true;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            inputPosition = Input.mousePosition;
+            LogDebug($"[ARScanFeature] Mouse click detected at: {inputPosition}");
+            return true;
+        }
+
+        return false;
+    }
+
+    private void LogDebug(string message)
+    {
+        if (enableDebugLogs) Debug.Log(message);
+    }
+
+    private static bool IsARTarget(Transform t)
+    {
+        return t.gameObject.name.StartsWith("PF_") || t.root.name.StartsWith("ImageTarget");
     }
 
     private void ShowActionButtons()
@@ -232,12 +233,12 @@ public class ARScanFeature : MonoBehaviour
         if (quizButton != null) quizButton.SetActive(false);
     }
 
-    public void OnWalkButtonClicked()
+    public static void OnWalkButtonClicked()
     {
         Debug.Log("[ARScanFeature] Walk button clicked - Animation will be added later");
     }
 
-    public void OnAttackButtonClicked()
+    public static void OnAttackButtonClicked()
     {
         Debug.Log("[ARScanFeature] Attack button clicked - Animation will be added later");
     }
@@ -291,7 +292,6 @@ public class ARScanFeature : MonoBehaviour
         ResetScanState();
     }
 
-    // NEW: Call this when user clicks Back button in dictionary
     public void OnBackFromDictionary()
     {
         if (enableDebugLogs)

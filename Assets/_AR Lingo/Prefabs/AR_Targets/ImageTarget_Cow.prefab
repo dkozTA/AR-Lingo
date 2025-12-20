@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5897259266846049884}
   - component: {fileID: 7240912904198437506}
   - component: {fileID: 3856986717395183531}
-  - component: {fileID: 13663834267160518}
+  - component: {fileID: 6222641234363217489}
+  - component: {fileID: 8578234524765701043}
   m_Layer: 0
   m_Name: ImageTarget_Cow
   m_TagString: Untagged
@@ -62,7 +63,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 13663834267160518}
+  mPreview: {fileID: 8578234524765701043}
 --- !u!114 &7240912904198437506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,8 +145,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARContentTrigger
   wordID: Cow
+  ar3DModel: {fileID: 8351985414680334376}
   enableDebugLogs: 1
---- !u!114 &13663834267160518
+--- !u!114 &6222641234363217489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265353599147978029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 5897259266846049884}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: img_cow
+  mDatasetName: Vuforia/Animals12.xml
+  mCastedBehaviour: {fileID: 5897259266846049884}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &8578234524765701043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,5 +285,10 @@ PrefabInstance:
 --- !u!4 &5277491336149813532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6032452225565546672, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
+  m_PrefabInstance: {fileID: 1912615039965073836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8351985414680334376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7593859817806217604, guid: d025568698c01d948bd1ac6561e469a2, type: 3}
   m_PrefabInstance: {fileID: 1912615039965073836}
   m_PrefabAsset: {fileID: 0}

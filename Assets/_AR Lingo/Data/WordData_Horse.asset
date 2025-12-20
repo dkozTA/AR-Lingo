@@ -13,10 +13,19 @@ MonoBehaviour:
   m_Name: WordData_Horse
   m_EditorClassIdentifier: Assembly-CSharp::WordData
   id: Horse
+  category: 0
   englishName: Horse
-  vietnameseName: "Ng\u1EF1a"
-  description: 
-  modelPrefab: {fileID: 1649035804362627694, guid: bfe8223c0425a3340b12503a4295bd2a, type: 3}
-  icon2D: {fileID: 0}
+  vietnameseName: "Con ng\u1EF1a"
+  pronunciation: "/h\u0254\u02D0rs/"
+  description: Horses are strong animals used for riding and racing. They can sleep
+    while standing up.
+  vietnameseDescription: "Ng\u1EF1a l\xE0 lo\xE0i v\u1EADt kh\u1ECFe m\u1EA1nh d\xF9ng
+    \u0111\u1EC3 c\u01B0\u1EE1i v\xE0 \u0111ua. Ch\xFAng c\xF3 th\u1EC3 ng\u1EE7
+    ngay c\u1EA3 khi \u0111ang \u0111\u1EE9ng."
+  modelPrefab: {fileID: 822801854457435096, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
+  icon2D: {fileID: 21300000, guid: 15d4ba4167053834aa52e399445e3290, type: 3}
   audioPronounce: {fileID: 8300000, guid: d2bc196621050ae4d81547a8ba7db3b6, type: 3}
   audioSFX: {fileID: 8300000, guid: 59d08b80736dd5941974a6eab4164901, type: 3}
+  hasAnimations: 1
+  walkAnimationName: Walk
+  attackAnimationName: Attack

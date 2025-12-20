@@ -13,10 +13,19 @@ MonoBehaviour:
   m_Name: WordData_Stag
   m_EditorClassIdentifier: Assembly-CSharp::WordData
   id: Stag
-  englishName: Red Deer
-  vietnameseName: 
-  description: 
+  category: 0
+  englishName: Stag
+  vietnameseName: "H\u01B0\u01A1u \u0111\u1EF1c (c\xF3 s\u1EEBng)"
+  pronunciation: "/st\xE6\u0261/"
+  description: A stag is a male deer. It has large, majestic antlers that grow back
+    every year.
+  vietnameseDescription: "Stag l\xE0 con h\u01B0\u01A1u \u0111\u1EF1c tr\u01B0\u1EDFng
+    th\xE0nh. N\xF3 c\xF3 c\u1EB7p s\u1EEBng l\u1EDBn, oai v\u1EC7 v\xE0 m\u1ECDc
+    l\u1EA1i h\xE0ng n\u0103m."
   modelPrefab: {fileID: 2521319995674052539, guid: e8a2965d6d00d3a47bf7c159b49c5040, type: 3}
-  icon2D: {fileID: 0}
+  icon2D: {fileID: 21300000, guid: 3c5553bfd07b29745b943e9f5a95989b, type: 3}
   audioPronounce: {fileID: 8300000, guid: 77d6ea772320bcd4b800972f4312f761, type: 3}
   audioSFX: {fileID: 8300000, guid: 4cdc5096dcce48b41aaecbbfcdd11bac, type: 3}
+  hasAnimations: 1
+  walkAnimationName: Walk
+  attackAnimationName: Attack

@@ -12,11 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7bebb417f87f1b4f96e4db0d435d7f4, type: 3}
   m_Name: WordData_HorseWhite
   m_EditorClassIdentifier: Assembly-CSharp::WordData
-  id: Horse_White
+  id: HorseWhite
+  category: 0
   englishName: White Horse
-  vietnameseName: "Ng\u1EF1a tr\u1EAFng"
-  description: A horse with a coat consisting of white hairs.
+  vietnameseName: "Ng\u1EF1a tr\u1EAFng (B\u1EA1ch m\xE3)"
+  pronunciation: "/wa\u026At h\u0254\u02D0rs/"
+  description: A beautiful horse with a pure white coat. It symbolizes nobility and
+    purity.
+  vietnameseDescription: "M\u1ED9t ch\xFA ng\u1EF1a tuy\u1EC7t \u0111\u1EB9p v\u1EDBi
+    b\u1ED9 l\xF4ng tr\u1EAFng tinh khi\u1EBFt. N\xF3 bi\u1EC3u t\u01B0\u1EE3ng cho
+    s\u1EF1 qu\xFD ph\xE1i v\xE0 trong tr\u1EAFng."
   modelPrefab: {fileID: 0}
   icon2D: {fileID: 21300000, guid: 35910fbe4278d7a44ab2bb3604b45df9, type: 3}
   audioPronounce: {fileID: 8300000, guid: 799262db48ee5914ebf8fa8c5b4eee0f, type: 3}
   audioSFX: {fileID: 8300000, guid: b729ab94c132f904591ca85bb14c1df4, type: 3}
+  hasAnimations: 1
+  walkAnimationName: Walk
+  attackAnimationName: Attack

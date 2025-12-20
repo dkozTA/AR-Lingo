@@ -13,10 +13,19 @@ MonoBehaviour:
   m_Name: WordData_Donkey
   m_EditorClassIdentifier: Assembly-CSharp::WordData
   id: Donkey
+  category: 0
   englishName: Donkey
   vietnameseName: "Con l\u1EEBa"
-  description: A domesticated member of the horse family.
+  pronunciation: "/\u02C8d\u0252\u014Bki/"
+  description: The donkey is a member of the horse family. It has long ears and is
+    very strong for carrying loads.
+  vietnameseDescription: "L\u1EEBa thu\u1ED9c h\u1ECD ng\u1EF1a. Ch\xFAng c\xF3 \u0111\xF4i
+    tai d\xE0i v\xE0 r\u1EA5t kh\u1ECFe, th\u01B0\u1EDDng \u0111\u01B0\u1EE3c d\xF9ng
+    \u0111\u1EC3 th\u1ED3 h\xE0ng h\xF3a."
   modelPrefab: {fileID: 0}
   icon2D: {fileID: 21300000, guid: 31616a4b226859043828da4acd93336b, type: 3}
   audioPronounce: {fileID: 8300000, guid: 9cefd322bb8903a4fa6f7cbffb1126c0, type: 3}
   audioSFX: {fileID: 8300000, guid: 9d92c305131a369499883ae62fb3f730, type: 3}
+  hasAnimations: 1
+  walkAnimationName: Walk
+  attackAnimationName: Attack

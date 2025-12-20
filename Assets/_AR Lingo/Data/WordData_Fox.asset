@@ -13,10 +13,18 @@ MonoBehaviour:
   m_Name: WordData_Fox
   m_EditorClassIdentifier: Assembly-CSharp::WordData
   id: Fox
+  category: 0
   englishName: Fox
   vietnameseName: "Con c\xE1o"
-  description: Small-to-medium-sized, omnivorous mammals.
+  pronunciation: "/f\u0252ks/"
+  description: Foxes are small, clever wild animals with a bushy tail and red fur.
+  vietnameseDescription: "C\xE1o l\xE0 lo\xE0i \u0111\u1ED9ng v\u1EADt hoang d\xE3
+    nh\u1ECF, th\xF4ng minh v\u1EDBi c\xE1i \u0111u\xF4i x\xF9 v\xE0 b\u1ED9 l\xF4ng
+    m\xE0u \u0111\u1ECF."
   modelPrefab: {fileID: 0}
   icon2D: {fileID: 21300000, guid: 3326b8fde6245a64a8bd9da43552e61b, type: 3}
   audioPronounce: {fileID: 8300000, guid: 7c0189e5e5f224a46b9bbc843f541455, type: 3}
   audioSFX: {fileID: 8300000, guid: b59b996a68100c2499f0c63395a958dd, type: 3}
+  hasAnimations: 1
+  walkAnimationName: Walk
+  attackAnimationName: Attack
