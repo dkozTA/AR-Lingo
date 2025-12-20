@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARContentTrigger
   wordID: Alpaca
+  ar3DModel: {fileID: 3539106995425358832}
   enableDebugLogs: 1
 --- !u!114 &2672372568197799165
 MonoBehaviour:
@@ -252,5 +253,10 @@ PrefabInstance:
 --- !u!4 &578425608403977403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4107863429063593528, guid: 728d694ba9dc37443be23a532a8009b0, type: 3}
+  m_PrefabInstance: {fileID: 3532206395393821315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3539106995425358832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7182075360868723, guid: 728d694ba9dc37443be23a532a8009b0, type: 3}
   m_PrefabInstance: {fileID: 3532206395393821315}
   m_PrefabAsset: {fileID: 0}

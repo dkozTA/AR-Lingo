@@ -699,6 +699,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1835886290637205011, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
       insertIndex: -1
       addedObject: {fileID: 432097896}
+    - targetCorrespondingSourceObject: {fileID: 1835886290637205011, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 432097897}
   m_SourcePrefab: {fileID: 100100000, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
 --- !u!1 &149769763
 GameObject:
@@ -1394,6 +1397,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7495634719782062930}
   - {fileID: 2093917603}
   - {fileID: 1796520239}
   - {fileID: 432097890}
@@ -2039,6 +2043,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetBehaviour
 --- !u!114 &432097896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432097889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 432097893}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: img_bull
+  mDatasetName: Vuforia/Animals12.xml
+  mCastedBehaviour: {fileID: 432097893}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &432097897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8071,6 +8094,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 79854855119142767, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2093917606}
+    - targetCorrespondingSourceObject: {fileID: 79854855119142767, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2093917607}
   m_SourcePrefab: {fileID: 100100000, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
 --- !u!1 &1289359256 stripped
 GameObject:
@@ -8641,6 +8667,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8265353599147978029, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1796520242}
+    - targetCorrespondingSourceObject: {fileID: 8265353599147978029, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1796520243}
   m_SourcePrefab: {fileID: 100100000, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
 --- !u!1 &1394841835
 GameObject:
@@ -10900,6 +10929,25 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1796520236}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &1796520243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796520232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 1796520236}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: img_cow
+  mDatasetName: Vuforia/Animals12.xml
+  mCastedBehaviour: {fileID: 1796520236}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1821615054
 GameObject:
   m_ObjectHideFlags: 0
@@ -12710,6 +12758,25 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 2093917600}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &2093917607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093917596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 2093917600}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: img_deer
+  mDatasetName: Vuforia/Animals12.xml
+  mCastedBehaviour: {fileID: 2093917600}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &2095564207
 GameObject:
   m_ObjectHideFlags: 0
@@ -13393,6 +13460,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122671220}
   m_CullTransparentMesh: 1
+--- !u!1001 &7495634719782062929
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 295610138}
+    m_Modifications:
+    - target: {fileID: 2672372568197799165, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: mHiddenRoot
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672372568197799165, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: mMeshFilter
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672372568197799165, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: mMeshRenderer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739903883437874326, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: m_Name
+      value: ImageTarget_Alpaca
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905447833588725510, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.188
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905447833588725510, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10237
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905447833588725510, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905447833588725510, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905447833588725510, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905447833588725510, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905447833588725510, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905447833588725510, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905447833588725510, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905447833588725510, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+--- !u!4 &7495634719782062930 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6905447833588725510, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+  m_PrefabInstance: {fileID: 7495634719782062929}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
