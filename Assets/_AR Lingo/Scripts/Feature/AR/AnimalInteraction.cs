@@ -63,7 +63,6 @@ public class AnimalInteraction : MonoBehaviour
             // Reset trigger cũ để tránh lặp lệnh (Optional)
             _animator.ResetTrigger(actionTriggerName);
             _animator.SetTrigger(actionTriggerName);
-            // Debug.Log($"[AnimalInteraction] Triggered animation: {actionTriggerName}");
         }
     }
 }
