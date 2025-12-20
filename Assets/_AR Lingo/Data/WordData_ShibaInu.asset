@@ -13,10 +13,18 @@ MonoBehaviour:
   m_Name: WordData_ShibaInu
   m_EditorClassIdentifier: Assembly-CSharp::WordData
   id: ShibaInu
+  category: 0
   englishName: Shiba Inu
   vietnameseName: "Ch\xF3 Shiba"
-  description: A Japanese breed of hunting dog.
+  pronunciation: "/\u02CC\u0283i\u02D0b\u0259 \u02C8i\u02D0nu\u02D0/"
+  description: The Shiba Inu is a Japanese dog breed. They are small, agile, and
+    very loyal to their owners.
+  vietnameseDescription: "Shiba Inu l\xE0 gi\u1ED1ng ch\xF3 Nh\u1EADt B\u1EA3n. Ch\xFAng
+    nh\u1ECF nh\u1EAFn, nhanh nh\u1EB9n v\xE0 r\u1EA5t trung th\xE0nh v\u1EDBi ch\u1EE7."
   modelPrefab: {fileID: 0}
   icon2D: {fileID: 21300000, guid: f9ace54c5c6bba8489d7fdef5789d4f3, type: 3}
   audioPronounce: {fileID: 8300000, guid: 1e105ebf1e2966240a0e26cd9e52d79c, type: 3}
   audioSFX: {fileID: 8300000, guid: 48232001620ce0d4f94199c2e7a7870e, type: 3}
+  hasAnimations: 1
+  walkAnimationName: Walk
+  attackAnimationName: Attack

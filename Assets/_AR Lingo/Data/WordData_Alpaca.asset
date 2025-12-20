@@ -13,10 +13,19 @@ MonoBehaviour:
   m_Name: WordData_Alpaca
   m_EditorClassIdentifier: Assembly-CSharp::WordData
   id: Alpaca
+  category: 0
   englishName: 'Alpaca '
   vietnameseName: "L\u1EA1c \u0111\xE0 Alpaca "
-  description: A domesticated species of South American camelid.
+  pronunciation: "/\xE6l\u02C8p\xE6k\u0259/"
+  description: The Alpaca is a species of South American camelid. It has soft wool
+    and a gentle nature.
+  vietnameseDescription: "L\u1EA1c \u0111\xE0 Alpaca l\xE0 lo\xE0i \u0111\u1ED9ng
+    v\u1EADt Nam M\u1EF9. Ch\xFAng c\xF3 b\u1ED9 l\xF4ng r\u1EA5t m\u1EC1m v\xE0
+    t\xEDnh t\xECnh hi\u1EC1n l\xE0nh."
   modelPrefab: {fileID: 822801854457435096, guid: f884e1a236191d946a4a784d132e78b7, type: 3}
   icon2D: {fileID: 21300000, guid: e4f5db6e15a05b94b9ea0ab1d31c6bd6, type: 3}
   audioPronounce: {fileID: 8300000, guid: bac5acd47b7c8ff42a45e953ae4d05aa, type: 3}
   audioSFX: {fileID: 8300000, guid: 4f65fe3830226494d96ce273ac71a786, type: 3}
+  hasAnimations: 1
+  walkAnimationName: Walk
+  attackAnimationName: Attack

@@ -13,10 +13,19 @@ MonoBehaviour:
   m_Name: WordData_Husky
   m_EditorClassIdentifier: Assembly-CSharp::WordData
   id: Husky
+  category: 0
   englishName: Husky
   vietnameseName: "Ch\xF3 Husky"
-  description: A sled dog used in the polar regions.
+  pronunciation: "/\u02C8h\u028Cski/"
+  description: The Husky is a sled dog from the north. They have thick fur and beautiful
+    blue eyes.
+  vietnameseDescription: "Husky l\xE0 gi\u1ED1ng ch\xF3 k\xE9o xe t\u1EEB ph\u01B0\u01A1ng
+    B\u1EAFc. Ch\xFAng c\xF3 b\u1ED9 l\xF4ng d\xE0y v\xE0 \u0111\xF4i m\u1EAFt xanh
+    tuy\u1EC7t \u0111\u1EB9p."
   modelPrefab: {fileID: 0}
   icon2D: {fileID: 21300000, guid: a00efcd91a79ab24d965cbfd86bd81bc, type: 3}
   audioPronounce: {fileID: 8300000, guid: bdd1913a2dc6fc04b94ffa95042e9e7b, type: 3}
   audioSFX: {fileID: 8300000, guid: ea8d98df398467140bff1c64c8c66f0a, type: 3}
+  hasAnimations: 1
+  walkAnimationName: Walk
+  attackAnimationName: Attack
