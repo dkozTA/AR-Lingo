@@ -7,38 +7,48 @@ using UnityEngine.UI;
 /// </summary>
 public class ARScanFeature : MonoBehaviour
 {
-    [Header("1. UI Elements")]
+    [Header("1. UI Elements - Bottom Action Buttons")]
     public GameObject viewInfoButton;
-    public GameObject quizButton;
-    public GameObject resetButton;
-    public GameObject scanInstruction;
-    public GameObject scanFrame;
     public GameObject walkButton;
     public GameObject attackButton;
+    public GameObject resetButton;
 
-    [Header("2. Panel References")]
+    [Header("1.2 NEW: Top-Right Navigation Buttons")]
+    public GameObject dictionaryButtonAR;
+    public GameObject quizButtonAR;
+
+    [Header("2. UI Instructions")]
+    public GameObject scanInstruction;
+    public GameObject scanFrame;
+
+    [Header("3. Panel References")]
     public GameObject dictionaryPanel;
     public GameObject scanPanel;
+    public GameObject quizPanel;
     public DictionaryUI dictionaryUI;
     public GameObject dictionaryListViewPanel;
     public GameObject dictionaryDetailViewPanel;
     public GameObject dictionaryListViewBackButton;
     public GameObject dictionaryHeader;
+    public DictionaryListView dictionaryListView;
 
-    [Header("3. Data")]
+    [Header("4. Data")]
     public WordDatabase wordDatabase;
     public AppStateManager gameManager;
 
-    [Header("4. AR Detection Settings")]
+    [Header("5. AR Detection Settings")]
     public Camera arCamera;
     [SerializeField] private bool autoShowButtonsOnDetection = true;
 
-    [Header("5. Debug")]
+    [Header("6. Debug")]
     [SerializeField] private bool enableDebugLogs = true;
 
     private WordData currentDetectedWord;
     private bool hasDetectedObject = false;
-    private bool isViewingDictionary = false; // NEW: Track if user is viewing dictionary
+    private bool isViewingDictionary = false;
+
+    // NEW: Static flag to track if panels were opened from AR Scan
+    private static bool _openedFromARScan = false;
 
     void Start()
     {
@@ -114,30 +124,29 @@ public class ARScanFeature : MonoBehaviour
         if (enableDebugLogs)
             Debug.Log("[ARScanFeature] AR Target lost");
 
-        // NEW: Don't reset if user is viewing dictionary detail
         if (isViewingDictionary)
         {
             if (enableDebugLogs)
                 Debug.Log("[ARScanFeature] User is viewing dictionary - keeping UI as is");
 
-            // Just hide the buttons, keep dictionary open
             if (viewInfoButton != null) viewInfoButton.SetActive(false);
-            if (quizButton != null) quizButton.SetActive(false);
             if (walkButton != null) walkButton.SetActive(false);
             if (attackButton != null) attackButton.SetActive(false);
+            
+            if (dictionaryButtonAR != null) dictionaryButtonAR.SetActive(false);
+            if (quizButtonAR != null) quizButtonAR.SetActive(false);
 
             hasDetectedObject = false;
             return;
         }
 
-        // Normal reset for scan panel
         ResetScanState();
     }
 
     private void ShowDetectedObject()
     {
         hasDetectedObject = true;
-        isViewingDictionary = false; // Reset dictionary flag
+        isViewingDictionary = false;
 
         if (scanInstruction != null) scanInstruction.SetActive(false);
         if (scanFrame != null) scanFrame.SetActive(false);
@@ -150,9 +159,11 @@ public class ARScanFeature : MonoBehaviour
         else
         {
             if (viewInfoButton != null) viewInfoButton.SetActive(false);
-            if (quizButton != null) quizButton.SetActive(false);
             if (walkButton != null) walkButton.SetActive(false);
             if (attackButton != null) attackButton.SetActive(false);
+            
+            if (dictionaryButtonAR != null) dictionaryButtonAR.SetActive(false);
+            if (quizButtonAR != null) quizButtonAR.SetActive(false);
 
             if (enableDebugLogs)
                 Debug.Log("[ARScanFeature] Waiting for tap on model to show buttons...");
@@ -230,7 +241,8 @@ public class ARScanFeature : MonoBehaviour
         if (walkButton != null) walkButton.SetActive(true);
         if (attackButton != null) attackButton.SetActive(true);
 
-        if (quizButton != null) quizButton.SetActive(false);
+        if (dictionaryButtonAR != null) dictionaryButtonAR.SetActive(true);
+        if (quizButtonAR != null) quizButtonAR.SetActive(true);
     }
 
     public static void OnWalkButtonClicked()
@@ -243,7 +255,7 @@ public class ARScanFeature : MonoBehaviour
         Debug.Log("[ARScanFeature] Attack button clicked - Animation will be added later");
     }
 
-    public void OnOpenDictionaryClicked()
+    public void OnViewInfoButtonClicked()
     {
         if (currentDetectedWord == null)
         {
@@ -252,10 +264,10 @@ public class ARScanFeature : MonoBehaviour
         }
 
         if (enableDebugLogs)
-            Debug.Log($"[ARScanFeature] Opening dictionary for: {currentDetectedWord.englishName}");
+            Debug.Log($"[ARScanFeature] Opening dictionary DETAIL for: {currentDetectedWord.englishName}");
 
-        // NEW: Set flag that we're viewing dictionary
         isViewingDictionary = true;
+        _openedFromARScan = true; // NEW: Set flag
 
         if (scanPanel != null) scanPanel.SetActive(false);
         if (dictionaryPanel != null) dictionaryPanel.SetActive(true);
@@ -281,12 +293,67 @@ public class ARScanFeature : MonoBehaviour
         }
     }
 
+    public void OnDictionaryListButtonClicked()
+    {
+        if (enableDebugLogs)
+            Debug.Log("[ARScanFeature] Opening dictionary LIST view");
+
+        isViewingDictionary = true;
+        _openedFromARScan = true; // NEW: Set flag
+
+        if (scanPanel != null) scanPanel.SetActive(false);
+        if (dictionaryPanel != null) dictionaryPanel.SetActive(true);
+
+        if (dictionaryListViewPanel != null)
+            dictionaryListViewPanel.SetActive(true);
+        if (dictionaryDetailViewPanel != null)
+            dictionaryDetailViewPanel.SetActive(false);
+
+        if (dictionaryListViewBackButton != null)
+            dictionaryListViewBackButton.SetActive(true);
+        if (dictionaryHeader != null)
+            dictionaryHeader.SetActive(true);
+
+        if (dictionaryListView != null)
+        {
+            dictionaryListView.gameObject.SetActive(true);
+            dictionaryListView.ShowListView();
+        }
+        else
+        {
+            Debug.LogWarning("ARScanFeature: DictionaryListView component not found!");
+        }
+    }
+
+    public void OnQuizButtonClicked()
+    {
+        Debug.Log("[ARScanFeature] OnQuizButtonClicked called");
+        
+        _openedFromARScan = true;
+        Debug.Log($"[ARScanFeature] Set _openedFromARScan = {_openedFromARScan}");
+
+        if (scanPanel != null) scanPanel.SetActive(false);
+        if (quizPanel != null) 
+        {
+            quizPanel.SetActive(true);
+            
+            var quizManager = quizPanel.GetComponent<QuizManager>();
+            if (quizManager != null)
+            {
+                quizManager.ResetQuiz();
+            }
+        }
+        else
+        {
+            Debug.LogWarning("ARScanFeature: Quiz panel not assigned!");
+        }
+    }
+
     public void OnResetClicked()
     {
         if (enableDebugLogs)
             Debug.Log("[ARScanFeature] Resetting scan state");
 
-        // NEW: Reset dictionary flag
         isViewingDictionary = false;
 
         ResetScanState();
@@ -297,38 +364,67 @@ public class ARScanFeature : MonoBehaviour
         if (enableDebugLogs)
             Debug.Log("[ARScanFeature] Back from dictionary to scan panel");
 
-        // Reset dictionary flag
         isViewingDictionary = false;
+        _openedFromARScan = false; // NEW: Clear flag
 
-        // Hide dictionary, show scan panel
         if (dictionaryPanel != null) dictionaryPanel.SetActive(false);
         if (dictionaryDetailViewPanel != null) dictionaryDetailViewPanel.SetActive(false);
+        if (dictionaryListViewPanel != null) dictionaryListViewPanel.SetActive(false);
+        
         if (scanPanel != null) scanPanel.SetActive(true);
 
-        // Reset to clean scan state
         ResetScanState();
+    }
+
+    public void OnBackFromQuiz()
+    {
+        if (enableDebugLogs)
+            Debug.Log("[ARScanFeature] Back from quiz to scan panel");
+
+        _openedFromARScan = false; // NEW: Clear flag
+
+        if (quizPanel != null) quizPanel.SetActive(false);
+        if (scanPanel != null) scanPanel.SetActive(true);
+
+        ResetScanState();
+    }
+
+    // NEW: Public static method to check if opened from AR Scan
+    public static bool IsOpenedFromARScan()
+    {
+        Debug.Log($"[ARScanFeature] IsOpenedFromARScan called - returning: {_openedFromARScan}");
+        return _openedFromARScan;
+    }
+
+    // NEW: Public static method to clear the flag (called from Home menu)
+    public static void ClearARScanFlag()
+    {
+        _openedFromARScan = false;
+        Debug.Log("[ARScanFeature] ClearARScanFlag called - set to FALSE");
     }
 
     private void ResetScanState()
     {
         hasDetectedObject = false;
         currentDetectedWord = null;
-        isViewingDictionary = false; // Make sure flag is reset
+        isViewingDictionary = false;
 
         if (scanInstruction != null) scanInstruction.SetActive(true);
         if (scanFrame != null) scanFrame.SetActive(true);
 
         if (viewInfoButton != null) viewInfoButton.SetActive(false);
-        if (quizButton != null) quizButton.SetActive(false);
-        if (resetButton != null) resetButton.SetActive(false);
         if (walkButton != null) walkButton.SetActive(false);
         if (attackButton != null) attackButton.SetActive(false);
+        if (resetButton != null) resetButton.SetActive(false);
 
-        // Only hide dictionary panels if not currently viewing
+        if (dictionaryButtonAR != null) dictionaryButtonAR.SetActive(false);
+        if (quizButtonAR != null) quizButtonAR.SetActive(false);
+
         if (!isViewingDictionary)
         {
             if (dictionaryPanel != null) dictionaryPanel.SetActive(false);
             if (dictionaryDetailViewPanel != null) dictionaryDetailViewPanel.SetActive(false);
+            if (dictionaryListViewPanel != null) dictionaryListViewPanel.SetActive(false);
         }
     }
 }

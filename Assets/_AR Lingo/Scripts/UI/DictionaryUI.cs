@@ -4,6 +4,7 @@ using TMPro;
 
 /// <summary>
 /// Dictionary UI - Displays word information in detail view
+/// Navigation is handled by DictionaryNavigationHandler
 /// </summary>
 public class DictionaryUI : MonoBehaviour
 {
@@ -15,55 +16,19 @@ public class DictionaryUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI vietnameseDescriptionText;
     [SerializeField] private Image iconImage;
     [SerializeField] private Button playPronunciationButton;
-    [SerializeField] private Button backButton;
-    [SerializeField] private Button homeButton;
-
-    // REMOVED: No longer need local audioSource
-    // [Header("Audio")]
-    // [SerializeField] private AudioSource audioSource;
-
-    [Header("Navigation")]
-    [SerializeField] private GameObject homePanel;
-    [SerializeField] private GameObject scanPanel;
-    [SerializeField] private SimpleMenuController menuController;
-    [SerializeField] private ARScanFeature arScanFeature;
-    [SerializeField] private DictionaryListView listView;
 
     private WordData currentWordData;
-    private bool cameFromARView = false;
-
-    void Awake()
-    {
-        // REMOVED: No longer create local AudioSource
-        // if (audioSource == null)
-        // {
-        //     audioSource = gameObject.AddComponent<AudioSource>();
-        //     audioSource.playOnAwake = false;
-        // }
-    }
 
     void OnEnable()
     {
         if (playPronunciationButton != null)
             playPronunciationButton.onClick.AddListener(PlayPronunciation);
-        
-        if (backButton != null)
-            backButton.onClick.AddListener(OnBackClicked);
-        
-        if (homeButton != null)
-            homeButton.onClick.AddListener(OnHomeClicked);
     }
 
     void OnDisable()
     {
         if (playPronunciationButton != null)
             playPronunciationButton.onClick.RemoveListener(PlayPronunciation);
-        
-        if (backButton != null)
-            backButton.onClick.RemoveListener(OnBackClicked);
-        
-        if (homeButton != null)
-            homeButton.onClick.RemoveListener(OnHomeClicked);
     }
 
     public void DisplayWord(WordData wordData, bool fromARView = false)
@@ -75,7 +40,6 @@ public class DictionaryUI : MonoBehaviour
         }
 
         currentWordData = wordData;
-        cameFromARView = fromARView;
 
         if (englishNameText != null)
             englishNameText.text = wordData.englishName;
@@ -128,7 +92,6 @@ public class DictionaryUI : MonoBehaviour
         }
     }
 
-    // FIXED: Use AudioManager instead of local AudioSource
     public void PlayPronunciation()
     {
         if (currentWordData == null)
@@ -139,11 +102,10 @@ public class DictionaryUI : MonoBehaviour
 
         if (currentWordData.audioPronounce != null)
         {
-            // Use AudioManager's Voice channel so it respects volume settings
             if (AudioManager.Instance != null)
             {
                 AudioManager.Instance.PlayVoice(currentWordData.audioPronounce);
-                Debug.Log($"Playing pronunciation for: {currentWordData.englishName}");
+                Debug.Log($"[DictionaryUI] Playing pronunciation for: {currentWordData.englishName}");
             }
             else
             {
@@ -153,51 +115,6 @@ public class DictionaryUI : MonoBehaviour
         else
         {
             Debug.LogWarning("DictionaryUI: Pronunciation audio clip is missing!");
-        }
-    }
-
-    public void OnBackClicked()
-    {
-        if (cameFromARView && scanPanel != null)
-        {
-            gameObject.SetActive(false);
-            
-            Transform parentPanel = transform.parent;
-            if (parentPanel != null && parentPanel.gameObject != gameObject)
-            {
-                parentPanel.gameObject.SetActive(false);
-            }
-            
-            scanPanel.SetActive(true);
-            
-            if (arScanFeature != null)
-            {
-                arScanFeature.OnBackFromDictionary();
-            }
-        }
-        else
-        {
-            if (listView != null)
-            {
-                gameObject.SetActive(false);
-                listView.BackToListView();
-            }
-            else
-            {
-                Debug.LogWarning("DictionaryUI: listView reference is not assigned!");
-            }
-        }
-    }
-
-    public void OnHomeClicked()
-    {
-        if (menuController != null)
-        {
-            menuController.BackToHome();
-        }
-        else
-        {
-            Debug.LogWarning("DictionaryUI: menuController reference is not assigned!");
         }
     }
 
