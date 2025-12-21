@@ -1,6 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+// IMPORTANT: Only import UnityEditor in Editor mode
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class SimpleMenuController : MonoBehaviour
 {
     [Header("Kéo các Panel vào đây")]
@@ -17,7 +22,6 @@ public class SimpleMenuController : MonoBehaviour
         homePanel.SetActive(false);
         scanPanel.SetActive(true);
         
-        // Clear AR scan flag when opening from home
         ARScanFeature.ClearARScanFlag();
     }
 
@@ -26,7 +30,6 @@ public class SimpleMenuController : MonoBehaviour
         homePanel.SetActive(false);
         dictionaryPanel.SetActive(true);
         
-        // NEW: Clear AR scan flag - Dictionary opened from HOME
         ARScanFeature.ClearARScanFlag();
     }
 
@@ -35,7 +38,6 @@ public class SimpleMenuController : MonoBehaviour
         homePanel.SetActive(false);
         quizPanel.SetActive(true);
         
-        // NEW: Clear AR scan flag - Quiz opened from HOME
         ARScanFeature.ClearARScanFlag();
     }
 
@@ -53,8 +55,10 @@ public class SimpleMenuController : MonoBehaviour
         Debug.Log("[SimpleMenuController] Quitting application...");
 
         #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
+        // In Unity Editor: Stop play mode
+        EditorApplication.isPlaying = false;
         #else
+        // On device/build: Quit application
         Application.Quit();
         #endif
     }
@@ -63,7 +67,6 @@ public class SimpleMenuController : MonoBehaviour
 
     public void BackToHome()
     {
-        // Clear AR scan flag when going back to home
         ARScanFeature.ClearARScanFlag();
         
         scanPanel.SetActive(false);

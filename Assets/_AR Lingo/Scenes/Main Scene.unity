@@ -699,6 +699,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1835886290637205011, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
       insertIndex: -1
       addedObject: {fileID: 432097896}
+    - targetCorrespondingSourceObject: {fileID: 8620115743678647417, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 215066273}
   m_SourcePrefab: {fileID: 100100000, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
 --- !u!1 &149769763
 GameObject:
@@ -1328,6 +1331,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0009613, y: 645.1599}
   m_SizeDelta: {x: 970.84, y: 268.5701}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &215066268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8620115743678647417, guid: be12d25f028959c4ab060e2f131ba739, type: 3}
+  m_PrefabInstance: {fileID: 146860580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &215066273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215066268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee8022fde1a25845adb873985c18bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalAnimationController
+  idleAnimationName: Idle
+  walkAnimationName: Walk
+  attackAnimationName: Attack
+  animationDuration: 3
 --- !u!1 &267073511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,6 +1388,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &282950380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3539106995425358832, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+  m_PrefabInstance: {fileID: 7495634719782062929}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &282950385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282950380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee8022fde1a25845adb873985c18bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalAnimationController
+  idleAnimationName: Idle
+  walkAnimationName: Walk
+  attackAnimationName: Attack
+  animationDuration: 3
 --- !u!1 &295610137
 GameObject:
   m_ObjectHideFlags: 0
@@ -6381,6 +6426,7 @@ GameObject:
   - component: {fileID: 954668900}
   - component: {fileID: 954668899}
   - component: {fileID: 954668898}
+  - component: {fileID: 954668901}
   m_Layer: 5
   m_Name: Panel_DetailView
   m_TagString: Untagged
@@ -6435,13 +6481,6 @@ MonoBehaviour:
   vietnameseDescriptionText: {fileID: 1029192735}
   iconImage: {fileID: 1161003097}
   playPronunciationButton: {fileID: 1676542747}
-  backButton: {fileID: 1785717607}
-  homeButton: {fileID: 2063573590}
-  homePanel: {fileID: 1441481734}
-  scanPanel: {fileID: 2122671220}
-  menuController: {fileID: 1430969268}
-  arScanFeature: {fileID: 0}
-  listView: {fileID: 654716122}
 --- !u!114 &954668899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6480,6 +6519,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954668896}
   m_CullTransparentMesh: 1
+--- !u!114 &954668901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954668896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360c6be7574c6094790870f9b76fc20e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DictionaryNavigationHandler
+  dictionaryPanel: {fileID: 654716118}
+  scanPanel: {fileID: 2122671220}
+  homePanel: {fileID: 1441481734}
+  listView: {fileID: 654716122}
+  menuController: {fileID: 1430969268}
+  arScanFeature: {fileID: 357212374}
+  backButton: {fileID: 788061032}
 --- !u!1 &956269489
 GameObject:
   m_ObjectHideFlags: 0
@@ -8701,12 +8759,31 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 79854855119142767, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2093917606}
+    - targetCorrespondingSourceObject: {fileID: 141494024823487776, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1289359261}
   m_SourcePrefab: {fileID: 100100000, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
 --- !u!1 &1289359256 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 141494024823487776, guid: d2eb7da294f011f4396484e419f4ff87, type: 3}
   m_PrefabInstance: {fileID: 1280200321}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1289359261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289359256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee8022fde1a25845adb873985c18bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalAnimationController
+  idleAnimationName: Idle
+  walkAnimationName: Walk
+  attackAnimationName: Attack
+  animationDuration: 3
 --- !u!1 &1311326826
 GameObject:
   m_ObjectHideFlags: 0
@@ -9407,6 +9484,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8265353599147978029, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1796520242}
+    - targetCorrespondingSourceObject: {fileID: 8351985414680334376, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1529966433}
   m_SourcePrefab: {fileID: 100100000, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
 --- !u!1 &1394841835
 GameObject:
@@ -9897,6 +9977,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518695221}
   m_CullTransparentMesh: 1
+--- !u!1 &1529966428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8351985414680334376, guid: 937d5d29845b34e4b8133d8dd2be5901, type: 3}
+  m_PrefabInstance: {fileID: 1393803096}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1529966433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529966428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee8022fde1a25845adb873985c18bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalAnimationController
+  idleAnimationName: Idle
+  walkAnimationName: Walk
+  attackAnimationName: Attack
+  animationDuration: 3
 --- !u!1 &1532879547
 GameObject:
   m_ObjectHideFlags: 0
@@ -11728,9 +11829,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 357212374}
-        m_TargetAssemblyTypeName: ARScanFeature, Assembly-CSharp
-        m_MethodName: OnBackFromDictionary
+      - m_Target: {fileID: 954668901}
+        m_TargetAssemblyTypeName: DictionaryNavigationHandler, Assembly-CSharp
+        m_MethodName: OnBackClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14518,6 +14619,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2739903883437874326, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7495634719782062936}
+    - targetCorrespondingSourceObject: {fileID: 3539106995425358832, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 282950385}
   m_SourcePrefab: {fileID: 100100000, guid: 1d97f3fd94e26794faea73ce35a388c1, type: 3}
 --- !u!4 &7495634719782062930 stripped
 Transform:

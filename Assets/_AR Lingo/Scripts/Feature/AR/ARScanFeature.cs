@@ -46,8 +46,10 @@ public class ARScanFeature : MonoBehaviour
     private WordData currentDetectedWord;
     private bool hasDetectedObject = false;
     private bool isViewingDictionary = false;
+    
+    // NEW: Store reference to current detected model's animator
+    private AnimalAnimationController currentAnimalController;
 
-    // NEW: Static flag to track if panels were opened from AR Scan
     private static bool _openedFromARScan = false;
 
     void Start()
@@ -106,6 +108,9 @@ public class ARScanFeature : MonoBehaviour
                 if (enableDebugLogs)
                     Debug.Log($"[ARScanFeature] Word found: {currentDetectedWord.englishName} ({currentDetectedWord.vietnameseName})");
 
+                // NEW: Find the AnimalAnimationController on the detected model
+                FindCurrentAnimalController(wordID);
+                
                 ShowDetectedObject();
             }
             else
@@ -117,6 +122,40 @@ public class ARScanFeature : MonoBehaviour
         {
             Debug.LogError("ARScanFeature: WordDatabase is not assigned!");
         }
+    }
+
+    // Find the AnimalAnimationController for the detected animal
+    private void FindCurrentAnimalController(string wordID)
+    {
+        // Search for the 3D model in the scene
+        string modelName = "PF_" + wordID.Replace("animal_", "");
+        
+        // FASTEST: Direct search by name
+        GameObject modelObject = GameObject.Find(modelName);
+        
+        if (modelObject != null)
+        {
+            currentAnimalController = modelObject.GetComponentInChildren<AnimalAnimationController>();
+            
+            if (currentAnimalController != null)
+            {
+                if (enableDebugLogs)
+                    Debug.Log($"[ARScanFeature] Found AnimalAnimationController on: {modelObject.name}");
+                
+                // Set custom animation names from WordData if available
+                if (currentDetectedWord != null && currentDetectedWord.SupportsAnimations())
+                {
+                    currentAnimalController.SetAnimationNames(
+                        currentDetectedWord.walkAnimationName,
+                        currentDetectedWord.attackAnimationName
+                    );
+                }
+                return;
+            }
+        }
+
+        if (enableDebugLogs)
+            Debug.LogWarning($"[ARScanFeature] AnimalAnimationController not found for: {modelName}");
     }
 
     private void HandleARObjectLost()
@@ -137,6 +176,7 @@ public class ARScanFeature : MonoBehaviour
             if (quizButtonAR != null) quizButtonAR.SetActive(false);
 
             hasDetectedObject = false;
+            currentAnimalController = null; // Clear reference
             return;
         }
 
@@ -238,21 +278,56 @@ public class ARScanFeature : MonoBehaviour
             Debug.Log("[ARScanFeature] Showing action buttons");
 
         if (viewInfoButton != null) viewInfoButton.SetActive(true);
-        if (walkButton != null) walkButton.SetActive(true);
-        if (attackButton != null) attackButton.SetActive(true);
+        
+        // NEW: Only show Walk/Attack buttons if the animal supports animations
+        bool hasAnimations = currentDetectedWord != null && currentDetectedWord.SupportsAnimations();
+        
+        if (walkButton != null) 
+            walkButton.SetActive(hasAnimations);
+        
+        if (attackButton != null) 
+            attackButton.SetActive(hasAnimations);
 
         if (dictionaryButtonAR != null) dictionaryButtonAR.SetActive(true);
         if (quizButtonAR != null) quizButtonAR.SetActive(true);
     }
 
-    public static void OnWalkButtonClicked()
+    // UPDATED: Walk button now triggers animation
+    public void OnWalkButtonClicked()
     {
-        Debug.Log("[ARScanFeature] Walk button clicked - Animation will be added later");
+        if (enableDebugLogs)
+            Debug.Log("[ARScanFeature] Walk button clicked");
+
+        if (currentAnimalController != null)
+        {
+            currentAnimalController.PlayWalk();
+            
+            if (enableDebugLogs)
+                Debug.Log($"[ARScanFeature] Playing Walk animation on: {currentAnimalController.gameObject.name}");
+        }
+        else
+        {
+            Debug.LogWarning("[ARScanFeature] No AnimalAnimationController found - cannot play Walk animation");
+        }
     }
 
-    public static void OnAttackButtonClicked()
+    // UPDATED: Attack button now triggers animation
+    public void OnAttackButtonClicked()
     {
-        Debug.Log("[ARScanFeature] Attack button clicked - Animation will be added later");
+        if (enableDebugLogs)
+            Debug.Log("[ARScanFeature] Attack button clicked");
+
+        if (currentAnimalController != null)
+        {
+            currentAnimalController.PlayAttack();
+            
+            if (enableDebugLogs)
+                Debug.Log($"[ARScanFeature] Playing Attack animation on: {currentAnimalController.gameObject.name}");
+        }
+        else
+        {
+            Debug.LogWarning("[ARScanFeature] No AnimalAnimationController found - cannot play Attack animation");
+        }
     }
 
     public void OnViewInfoButtonClicked()
@@ -267,7 +342,7 @@ public class ARScanFeature : MonoBehaviour
             Debug.Log($"[ARScanFeature] Opening dictionary DETAIL for: {currentDetectedWord.englishName}");
 
         isViewingDictionary = true;
-        _openedFromARScan = true; // NEW: Set flag
+        _openedFromARScan = true;
 
         if (scanPanel != null) scanPanel.SetActive(false);
         if (dictionaryPanel != null) dictionaryPanel.SetActive(true);
@@ -299,7 +374,7 @@ public class ARScanFeature : MonoBehaviour
             Debug.Log("[ARScanFeature] Opening dictionary LIST view");
 
         isViewingDictionary = true;
-        _openedFromARScan = true; // NEW: Set flag
+        _openedFromARScan = true;
 
         if (scanPanel != null) scanPanel.SetActive(false);
         if (dictionaryPanel != null) dictionaryPanel.SetActive(true);
@@ -365,7 +440,7 @@ public class ARScanFeature : MonoBehaviour
             Debug.Log("[ARScanFeature] Back from dictionary to scan panel");
 
         isViewingDictionary = false;
-        _openedFromARScan = false; // NEW: Clear flag
+        _openedFromARScan = false;
 
         if (dictionaryPanel != null) dictionaryPanel.SetActive(false);
         if (dictionaryDetailViewPanel != null) dictionaryDetailViewPanel.SetActive(false);
@@ -381,7 +456,7 @@ public class ARScanFeature : MonoBehaviour
         if (enableDebugLogs)
             Debug.Log("[ARScanFeature] Back from quiz to scan panel");
 
-        _openedFromARScan = false; // NEW: Clear flag
+        _openedFromARScan = false;
 
         if (quizPanel != null) quizPanel.SetActive(false);
         if (scanPanel != null) scanPanel.SetActive(true);
@@ -389,14 +464,12 @@ public class ARScanFeature : MonoBehaviour
         ResetScanState();
     }
 
-    // NEW: Public static method to check if opened from AR Scan
     public static bool IsOpenedFromARScan()
     {
         Debug.Log($"[ARScanFeature] IsOpenedFromARScan called - returning: {_openedFromARScan}");
         return _openedFromARScan;
     }
 
-    // NEW: Public static method to clear the flag (called from Home menu)
     public static void ClearARScanFlag()
     {
         _openedFromARScan = false;
@@ -408,6 +481,7 @@ public class ARScanFeature : MonoBehaviour
         hasDetectedObject = false;
         currentDetectedWord = null;
         isViewingDictionary = false;
+        currentAnimalController = null; // NEW: Clear controller reference
 
         if (scanInstruction != null) scanInstruction.SetActive(true);
         if (scanFrame != null) scanFrame.SetActive(true);
