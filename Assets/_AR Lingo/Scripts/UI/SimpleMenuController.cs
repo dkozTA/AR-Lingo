@@ -1,11 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// IMPORTANT: Only import UnityEditor in Editor mode
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
-
 public class SimpleMenuController : MonoBehaviour
 {
     [Header("Kéo các Panel vào đây")]
@@ -54,13 +49,7 @@ public class SimpleMenuController : MonoBehaviour
     {
         Debug.Log("[SimpleMenuController] Quitting application...");
 
-        #if UNITY_EDITOR
-        // In Unity Editor: Stop play mode
-        EditorApplication.isPlaying = false;
-        #else
-        // On device/build: Quit application
         Application.Quit();
-        #endif
     }
 
     // --- HÀM CHO NÚT BACK ---
