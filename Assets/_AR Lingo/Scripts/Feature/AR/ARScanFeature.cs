@@ -13,7 +13,7 @@ public class ARScanFeature : MonoBehaviour
     public GameObject attackButton;
     public GameObject resetButton;
 
-    [Header("1.2 NEW: Top-Right Navigation Buttons")]
+    [Header("1.2 Top-Right Navigation Buttons")]
     public GameObject dictionaryButtonAR;
     public GameObject quizButtonAR;
 
@@ -47,7 +47,7 @@ public class ARScanFeature : MonoBehaviour
     private bool hasDetectedObject = false;
     private bool isViewingDictionary = false;
     
-    // NEW: Store reference to current detected model's animator
+    // Store reference to current detected model's animator
     private AnimalAnimationController currentAnimalController;
 
     private static bool _openedFromARScan = false;
@@ -108,7 +108,7 @@ public class ARScanFeature : MonoBehaviour
                 if (enableDebugLogs)
                     Debug.Log($"[ARScanFeature] Word found: {currentDetectedWord.englishName} ({currentDetectedWord.vietnameseName})");
 
-                // NEW: Find the AnimalAnimationController on the detected model
+                // Find the AnimalAnimationController on the detected model
                 FindCurrentAnimalController(wordID);
                 
                 ShowDetectedObject();
@@ -130,7 +130,7 @@ public class ARScanFeature : MonoBehaviour
         // Search for the 3D model in the scene
         string modelName = "PF_" + wordID.Replace("animal_", "");
         
-        // FASTEST: Direct search by name
+        // Direct search by name
         GameObject modelObject = GameObject.Find(modelName);
         
         if (modelObject != null)
@@ -279,7 +279,7 @@ public class ARScanFeature : MonoBehaviour
 
         if (viewInfoButton != null) viewInfoButton.SetActive(true);
         
-        // NEW: Only show Walk/Attack buttons if the animal supports animations
+        // Only show Walk/Attack buttons if the animal supports animations
         bool hasAnimations = currentDetectedWord != null && currentDetectedWord.SupportsAnimations();
         
         if (walkButton != null) 
@@ -481,7 +481,7 @@ public class ARScanFeature : MonoBehaviour
         hasDetectedObject = false;
         currentDetectedWord = null;
         isViewingDictionary = false;
-        currentAnimalController = null; // NEW: Clear controller reference
+        currentAnimalController = null; // Clear controller reference
 
         if (scanInstruction != null) scanInstruction.SetActive(true);
         if (scanFrame != null) scanFrame.SetActive(true);
