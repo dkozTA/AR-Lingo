@@ -23,6 +23,7 @@ public class DictionaryListView : MonoBehaviour
     [Header("Search")]
     [SerializeField] private TMP_InputField searchInputField;
     [SerializeField] private Button searchButton;
+    [SerializeField] private GameObject noResultsMessage; 
 
     [Header("Grid Settings")]
     [SerializeField] private int columnsPerRow = 2;
@@ -194,7 +195,7 @@ public class DictionaryListView : MonoBehaviour
         }
     }
 
-    // NEW: Check if currently in detail view
+    // Check if currently in detail view
     public bool IsInDetailView()
     {
         if (detailViewPanel != null)
@@ -221,25 +222,41 @@ public class DictionaryListView : MonoBehaviour
     {
         if (string.IsNullOrEmpty(searchText))
         {
+            // Show all words
             foreach (var wordItem in currentWordItems)
             {
                 if (wordItem != null)
                     wordItem.gameObject.SetActive(true);
             }
+            
+            // Hide "no results" message
+            if (noResultsMessage != null)
+                noResultsMessage.SetActive(false);
+            
             return;
         }
 
         searchText = searchText.ToLower();
+        int visibleCount = 0;
 
         foreach (var wordItem in currentWordItems)
         {
             if (wordItem != null && wordItem.WordData != null)
             {
                 bool matches = wordItem.WordData.englishName.ToLower().Contains(searchText) ||
-                              wordItem.WordData.vietnameseName.ToLower().Contains(searchText);
+                            wordItem.WordData.vietnameseName.ToLower().Contains(searchText);
                 
                 wordItem.gameObject.SetActive(matches);
+                
+                if (matches)
+                    visibleCount++;
             }
+        }
+        
+        // show/hide "no results" message
+        if (noResultsMessage != null)
+        {
+            noResultsMessage.SetActive(visibleCount == 0);
         }
     }
 

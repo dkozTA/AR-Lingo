@@ -15,7 +15,7 @@ public class SettingsUI : MonoBehaviour
 
     [Header("Quiz Settings UI")]
     public GameObject quizSettingsPanel;
-    public GameObject quizSettingsOverlay; // NEW: Dark overlay
+    public GameObject quizSettingsOverlay;
     public Slider sliderQuestionCount;
     public TextMeshProUGUI textQuestionCount;
     public Toggle toggleAutoGenerate;
@@ -78,7 +78,7 @@ public class SettingsUI : MonoBehaviour
             quizSettingsPanel.SetActive(false);
         }
 
-        // NEW: Initially hide overlay
+        // Initially hide overlay
         if (quizSettingsOverlay != null)
         {
             quizSettingsOverlay.SetActive(false);
@@ -168,7 +168,7 @@ public class SettingsUI : MonoBehaviour
 
     public void OnOpenQuizSettingsClicked()
     {
-        // NEW: Show overlay first (to darken background)
+        // Show overlay first (to darken background)
         if (quizSettingsOverlay != null)
         {
             quizSettingsOverlay.SetActive(true);
@@ -193,7 +193,7 @@ public class SettingsUI : MonoBehaviour
             {
                 quizManager.numberOfQuestions = questionCount;
                 
-                // FIXED: Regenerate quiz with new settings immediately
+                // Regenerate quiz with new settings immediately
                 if (quizManager.autoGenerateOnStart)
                 {
                     quizManager.GenerateQuizFromDatabase(questionCount);
@@ -222,7 +222,7 @@ public class SettingsUI : MonoBehaviour
         CloseQuizSettings();
     }
 
-    // NEW: Helper method to close quiz settings (used by Save and Cancel)
+    // Helper method to close quiz settings (used by Save and Cancel)
     private void CloseQuizSettings()
     {
         if (quizSettingsPanel != null)
@@ -230,7 +230,7 @@ public class SettingsUI : MonoBehaviour
             quizSettingsPanel.SetActive(false);
         }
 
-        // NEW: Hide overlay when closing
+        // Hide overlay when closing
         if (quizSettingsOverlay != null)
         {
             quizSettingsOverlay.SetActive(false);

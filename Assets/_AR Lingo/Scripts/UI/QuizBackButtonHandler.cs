@@ -16,7 +16,6 @@ public class QuizBackButtonHandler : MonoBehaviour
     [Header("Button")]
     public Button backButton; // Keep for reference, but don't add listener in code
 
-    // REMOVED: OnEnable() and OnDisable() methods
     // The button is already connected in Unity Inspector, so we don't need to add listener in code
 
     public void OnBackClicked()
